@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>index</title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/base.css" />
+   <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+<body>
+   <div id="wrap">
+      @@include('./include/header.html')
+      <div id="banner">
+         <ul class="w-banner">
+            <li class="on"></li>
+            <li></li>
+         </ul>
+         <ul class="w-sign">
+            <li class="on"></li>
+            <li></li>
+         </ul>
+         <form id="login">
+            <ul>
+               <li><h3 class="login-title" data-i18n="login"></h3></li>
+               <li class="input-style">
+                  <i class="icon icon-user2"></i><input type="text" id="input-user" data-i18n="[placeholder]input_user" />
+                  <div class="tips-error hide"></div>
+               </li>
+               <li class="input-style">
+                  <i class="icon icon-lock2"></i><input type="password" id="input-pwd" data-i18n="[placeholder]input_pwd" />
+                  <div class="tips-error hide"></div>
+               </li>
+               <li class="input-checkbox">
+                  <label><input type="checkbox" id="remember" /> <p class='bind_ip'><span data-i18n="store_user"></span><span class="sign">(<i>?</i>)</span></p></label>
+                  <div class="cont-tips" data-i18n="bind_ip"></div>
+               </li>
+               <li><button type="button" class="login-btn" data-i18n="login"></button></li>
+               <li><p>
+                  <a href="./register.html" data-i18n="register2"></a><span>|</span>
+                  <a href="./forgotPwd.html" data-i18n="forgot"></a><span>|</span>
+                  <a href="javascript:;" data-i18n="a_coin"></a>
+               </p></li>
+            </ul>
+            <ul>
+               <li><h4 data-i18n="welcome"></h4></li>
+               <li>
+                  <p><i class="icon icon-user2"></i><span data-i18n="account1"></span><label id="user-account"></label></p>
+                  <p><i class="icon icon-id"></i><span>姓名：</span><label id="user-id"></label>
+                     <a href="./toRealName.html" class="certification hide">（<span data-i18n="Certificationreal"></span>）</a>
+                  </p>
+               </li>
+               <li id="asset-list">
+                  <p data-i18n="total_assets"></p>
+                  <h3 class="asset">--</h3>
+                  <p>
+                  <span class="hight" id='CnyAmount'>CNY</span>
+                  <span id = 'BtcAmount'>BTC</span>
+                  <span id = 'EthAmount'>ETH</span>
+                  </p>
+                  <!-- <p>
+                     <img src="./imgs/c-cny.png" alt="币种" />
+                     <span>CNY：</span>
+                     <label class="asset-cny"></label>
+                  </p>
+                  <p>
+                     <img src="./imgs/c-btc.png" alt="币种" />
+                     <span>BTC：</span>
+                     <label class="asset-btc"></label>
+                  </p>
+                  <p>
+                     <img src="./imgs/c-etc.png" alt="币种" />
+                     <span>ETC：</span>
+                     <label class="asset-etc"></label>
+                  </p> -->
+               </li>
+               <li><a href="./market.html" data-i18n="trading_center"></a></li>
+            </ul>
+         </form>
+         <div id="hot-list">
+         <ul class="hot">
+            <li>
+               <span data-i18n="deal_amount"></span>
+               <span class="h-cny"></span>
+            </li>
+            <li>
+               <span data-i18n="bitcoin"></span>
+               <span class="h-btc"></span>
+            </li>
+            <li>
+               <span data-i18n="ETH"></span>
+               <span class="h-eth"></span>
+            </li>
+            <li>
+               <span data-i18n="small_ant"></span>
+               <span class="h-ans"></span>
+            </li>
+         </ul>
+      </div>
+      </div>
+      <div class="section section-first w-box">
+         <h3 data-i18n="Professional" ></h3>
+         <ul>
+            <li><img src="./imgs/1.png" data-i18n="[alt]speciality" />
+               <div>
+                  <h4 data-i18n="speciality"></h4>
+                  <p data-i18n="speciality_detail"></p>
+               </div>
+            </li>
+            <li><img src="./imgs/2.png" data-i18n="[alt]safety" />
+               <div>
+                  <h4 data-i18n="safety"></h4>
+                  <p data-i18n="safety_detail"></p>
+               </div>
+            </li>
+            <li><img src="./imgs/3.png" data-i18n="[alt]reliable" />
+               <div>
+                  <h4 data-i18n="reliable"></h4>
+                  <p data-i18n="reliable_detail"></p>
+               </div>
+            </li>
+         </ul>
+      </div>
+      <div class="section section-bg">
+         <div class="section-second">
+            <img src="./imgs/4.png" data-i18n="[alt]online_tran">
+            <ul>
+               <h3 data-i18n="online_tran"></h3>
+               <li>
+                  <h4 data-i18n="functional"></h4>
+                  <p data-i18n="functional_detail"></p>
+               </li>
+               <li>
+                  <h4 data-i18n="downloads"></h4>
+                  <p data-i18n="downloads_detail"></p>
+               </li>
+               <li>
+                  <h4 data-i18n="convenient"></h4>
+                  <p data-i18n="convenient_detail"></p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="section section-third w-box">
+         <h3 data-i18n="multi_terminal"></h3>
+         <img class="pic" src="./imgs/多终端.png">
+         <ul>
+            <li><img src="./imgs/6.png" alt="ios"><a href="javascript:;"></a></li>
+            <li><img src="./imgs/7.png" alt="android"><a href="javascript:;"></a></li>
+         </ul>
+      </div>
+      <div class="section section-bg">
+         <div class="section-four">
+            <h3 data-i18n="help_center"></h3>
+            <ul>
+               <li>
+                  <div><img src="./imgs/注册.png" data-i18n="[alt]register"></div>
+                  <p data-i18n="how_register"></p>
+               </li>
+               <li>
+                  <div><img src="./imgs/充值.png" data-i18n="[alt]recharge"></div>
+                  <p data-i18n="how_recharge"></p>
+               </li>
+               <li>
+                  <div><img src="./imgs/交易.png" data-i18n="[alt]change"></div>
+                  <p data-i18n="change"></p>
+               </li>
+               <li>
+                  <div><img src="./imgs/提现.png" data-i18n="[alt]register"></div>
+                  <p data-i18n="withdraw"></p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="section section-fifth ">
+         <h3 data-i18n="partnership"></h3>
+         <ul>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+            <li><a href="javascript:;"><img src="./imgs/link.png" data-i18n="[alt]link_exchange"></a></li>
+         </ul>
+      </div>
+      @@include('./include/footer.html')
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+  
+</body>
+</html>

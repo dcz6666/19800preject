@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="asset_page"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/market.css" />
+</head>
+<body>
+   <div id="wrap" class="markets transaction">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="ctt my-capital">
+            <h3 class="capital-top"><i class="icon icon-building"></i><span data-i18n="asset_page"></span></h3>
+            <div class="filter-box">
+               <label><input type="checkbox" name="filter" id="hide-null"><span>隐藏持有量为0的币种</span></label>
+               <label><input type="checkbox" name="filter" id="hide-unshelve"><span>隐藏已下架的币种</span></label>
+               <div class="search-input"><i class="icon icon-search"></i><input type="text" id="currency-search" data-i18n="[placeholder]screening" /></div>
+            </div>
+            <table class="table-currency show" id="assets-table">
+               <thead>
+                  <tr>
+                     <th data-i18n="currency"></th>
+                     <th data-i18n="total"></th>
+                     <th data-i18n="order_amount"></th>
+                     <th><span data-i18n="reduce"></span>CNY</th>
+                     <th><span data-i18n="reduce"></span>BTC</th>
+                     <th><span data-i18n="reduce"></span>ETH</th>
+                     <th data-i18n="operation"></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="actionArrow">
+                     <td colspan="7">
+                        <div class="box-style box-actual">
+                           <div class="mod-box mod-recharge">
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span data-i18n="authentication"></span></p>
+                                 <a href="./toRealName.html" data-i18n="certification"></a>
+                              </div>
+                              <div class="allow-recharge">
+                                 <ul class="recharge-tab">
+                                    <li class="on"><span data-i18n="alipay"></span><i class="icon icon-avoid show"></i></li>
+                                    <li><span data-i18n="bank"></span><i class="icon icon-avoid"></i></li>
+                                    <li><span data-i18n="recharge_Code"></span><i class="icon icon-avoid"></i></li>
+                                 </ul>
+                                 <div class="recharge-boxs">
+                                    <div class="recharge-box show">
+                                       <div class="items-box show">
+                                          <form class="box-form">
+                                             <div class="form-group"><label data-i18n="name"></label><span class="username"></span><small data-i18n="consistent"></small></div>
+                                             <div class="form-group">
+                                                <label for="alipay-num" data-i18n="re_amount"></label>
+                                                <input type="text" id="alipay-num" data-i18n="recharge_amount" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alipay-phone" data-i18n="Contact_phone"></label>
+                                                <input type="text" id="alipay-phone" data-i18n="[placeholder]enter_contact" />
+                                             </div>
+                                             <div class="form-group">
+                                                <button type="button" class="commit-apply" data-id="alipay" data-i18n="submit"></button>
+                                             </div>
+                                          </form>
+                                          <ul class="msg-declare">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n="instructions"></span></li>
+                                             <li data-i18n="per_cent"></li>
+                                             <li data-i18n="support_amount"></li>
+                                             <li data-i18n="accordance"></li>
+                                             <li data-i18n="personally"></li>
+                                             <li><span data-i18n="transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a data-i18n="view_recharge"></li>
+                                          </ul>
+                                       </div>
+                                       <div class="items-box">
+                                          <table class="alipay-table">
+                                             <caption data-i18n="alipay_transfer"></caption>
+                                             <tbody>
+                                                <tr>
+                                                   <td data-i18n="alipay_account"></td>
+                                                   <td id="txt-accountNumber">liweitao@19800.com</td>
+                                                   <td rowspan="4" class="alipay-img"><img src="./imgs/alipayCode.jpg" data-i18n="[alt]alipay_account" /></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="beneficiary"></td>
+                                                   <td id="txt-ownerName" data-i18n="shanghai"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="amount_paid"></td>
+                                                   <td><span id="txt-amount">--</span><span id="txt-currency">CNY</span></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="remarks"></td>
+                                                   <td><span id="txt-identify">--</span><span data-i18n="remittance"></span></td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                          <ul class="msg-declare transfer">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n="tran_instruct"></span></li>
+                                             <li data-i18n="transfer_money"></li>
+                                             <li data-i18n="transfer_complete"></li>
+                                             <li><span data-i18n="questions"></span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" data-i18n="contact"></a><span>。</span></li>
+                                             <li><span data-i18n="after_transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="progress"></span></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="recharge-box">
+                                       <div class="items-box show">
+                                          <form class="box-form">
+                                             <ol class="form-group recharge-step">
+                                                <li><i>1</i><span data-i18n="prepaid"></span></li>
+                                                <li><i>2</i><span data-i18n="logon_internet"></span></li>
+                                                <li><i>3</i><span data-i18n="arrive"></span></li>
+                                             </ol>
+                                             <div class="form-group">
+                                                <label for="alipay-num" data-i18n="re_amount"></label>
+                                                <input type="text" id="bank-num" data-i18n="[placeholder]top_rmb" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alipay-phone" data-i18n="Contact_phone"></label>
+                                                <input type="text" id="bank-phone" data-i18n="[placeholder]enter_contact" />
+                                             </div>
+                                             <div class="form-group">
+                                                <button type="button" class="commit-apply" data-id="bank" data-i18n="submit"></button>
+                                             </div>
+                                          </form>
+                                          <ul class="msg-declare">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n="instructions"></span></li>
+                                             <li data-i18n="per_cent"></li>
+                                             <li data-i18n="support_amount"></li>
+                                             <li data-i18n="accordance"></li>
+                                             <li data-i18n="personally">。</li>
+                                             <li><span data-i18n="transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="progress"></span></li>
+                                          </ul>
+                                       </div>
+                                       <div class="items-box">
+                                          <table class="alipay-table bank-alipay">
+                                             <caption data-i18n="remit"></caption>
+                                             <tbody>
+                                                <tr>
+                                                   <td data-i18n="bank_account"></td>
+                                                   <td id="txt-bankAccount">--</td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="open_bank"></td>
+                                                   <td id="txt-subbranch" ></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="beneficiary"></td>
+                                                   <td id="txt-ownername"></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="amount_paid"></td>
+                                                   <td><span id="txt-payAccount">--</span><span id="txt-currency2"></span></td>
+                                                </tr>
+                                                <tr>
+                                                   <td data-i18n="note_ps"></td>
+                                                   <td><span id="txt-remark">--</span><span data-i18n="remittance"></span></td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                          <ul class="msg-declare remit">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n="notice"></span></li>
+                                             <li data-i18n="silver"></li>
+                                             <li data-i18n="note_postscript">。</li>
+                                             <li><span data-i18n="questions"></span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" data-i18n="contact"></a><span>。</span></li>
+                                             <li><span data-i18n="after_transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a data-i18n="progress"></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="recharge-box">
+                                       <div class="items-box show">
+                                          <form class="box-form cs-box">
+                                             <div class="form-group"><label data-i18n="prepaid_service"></label><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" class="re-cs"></a></div>
+                                             <div class="form-group">
+                                                <label for="alipay-code" data-i18n="top_code"></label>
+                                                <input type="text" id="alipay-code" data-i18n="[placeholder]recharge_enter" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alipay-code" data-i18n=“code_pwd></label>
+                                                <input type="text" id="alipay-codePwd" data-i18n="[placeholder]code_pwd" />
+                                             </div>
+                                             <div class="form-group">
+                                                <button type="button" class="commit-apply" data-id="code" data-i18n="submit"></button>
+                                             </div>
+                                          </form>
+                                          <ul class="msg-declare cs-box">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n="instructions"></span></li>
+                                             <li><span data-i18n="please"></span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" data-i18n="contact"></a><span data-i18n="ask_top"></span></li>
+                                             <li data-i18n="Transferred"></li>
+                                             <li data-i18n="input_box"></li>
+                                             <li><span data-i18n="after_transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_recharge"></span></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mod-box mod-cash">
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span data-i18n="authentication"></span></p>
+                                 <a href="./toRealName.html" data-i18n="certification"></a>
+                              </div>
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span class="cash-msg"><span data-i18n="Submitted"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_cash"></span></span></p>
+                                 <a href="javascript:;" data-i18n="certain"></a>
+                              </div>
+                              <div class="allow-cash">
+                                 <div class="cash-box">
+                                    <form class="box-form actual-cash show">
+                                       <div class="form-group">
+                                          <label data-i18n="bank_number"></label>
+                                          <div class="dropdown-box">
+                                             <label class="dropdown-txt">
+                                                <span class="txt-bank">--</span><span class="txt-num">--</span><i class="icon icon-down2"></i>
+                                                <span class="operate-style bank-operate bank-add show" data-type="add" data-i18n="add_card"></span>
+                                                <span class="operate-style bank-operate bank-select" data-type="select" data-i18n="choose_card"></span>
+                                             </label>
+                                             <ul class="dropdown-list card-list">
+                                                <!-- <li class="active" data-type="mod-addBank">＋快速添加认证银行卡</li>
+                                                <li><i class="icon icon-card"></i><span class="bankname">招行银行</span><span class="banknum">尾号6632</span><i class="icon icon-del"></i></li> -->
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <div class="form-group"><label for="cash-num" data-i18n="Withdrawal"></label><input type="text" id="cash-num" placeholder="" /></div>
+                                       <div class="form-group"><label for="buz-pwd" data-i18n="trader_password"></label><input type="password" id="buz-pwd" data-i18n="[placeholder]Trade_Pwd" /></div>
+                                       <div class="form-group code-box gug-code"><label for="gug-code" data-i18n="verification"></label><input type="text" id="gug-code" data-i18n="[placeholder]enter_goo" />
+                                          <p class="code-tab" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+                                       </div>
+                                       <div class="form-group code-box phone-code"><label for="phone-code" data-i18n="pho_verify"></label><input type="text" id="phone-code" data-i18n="enter_verify" />
+                                          <p class="send-code"><button type="button" data-sign="act-code" data-i18n="send_verify"></button></p>
+                                          <p class="code-tab" data-type="gug"><span data-i18n="switch"></span><span data-i18n="Authenticator"></span></p>
+                                       </div>
+                                       <div class="form-group"><button type="button" class="cash-btn" data-sign="cny" data-i18n="confirm_withdrawal"></button></div>
+                                    </form>
+                                    <ul class="msg-declare cash-notice">
+                                       <li><i class="icon icon-bulb"></i><span data-i18n="Withdrawal_notice"></span></li>
+                                       <li data-i18n="withdrawal_fee"></li>
+                                       <li><span data-i18n="differences"></span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" data-i18n="contact"></a><span>。</span></li>
+                                       <li><span data-i18n="less_than"></span><span class="txt-min"></span><span data-i18n="not_above"></span><span class="txt-limit"></span><span>。</span></li>
+                                       <li><span data-i18n="after_transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_recharge"></span></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="box-style box-virtual">
+                           <div class="mod-box mod-recharge">
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span data-i18n="authentication"></span></p>
+                                 <a href="./toRealName.html" data-i18n="certification"></a>
+                              </div>
+                              <div class="allow-recharge virtual-rechargeBox">
+                                 <div class="recharge-boxs">
+                                    <div class="recharge-box show">
+                                       <div class="items-box show">
+                                          <form class="box-form">
+                                             <div class="form-group"><label data-i18n="Recharge_address"></label><input type="text" id="address" data-i18n="[placeholder]loading_in" readonly /></div>
+                                             <div class="form-group">
+                                                <p id="qrcode"></p>
+                                             </div>
+                                             <div class="form-group">
+                                                <button type="button" id="copy-addr" data-clipboard-target="#address" data-i18n="Copy_wallet"></button>
+                                             </div>
+                                          </form>
+                                          <ul class="msg-declare cs-box">
+                                             <li><i class="icon icon-bulb"></i><span data-i18n=”instructions></span></li>
+                                             <li><span data-i18n="please"></span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA0NjM3N18zNzgxNTFfODAwMDQ2Mzc3XzJf" target="_blank" data-i18n="contact"></a><span data-i18n="ask_top"></span></li>
+                                             <li data-i18n="Transferred"></li>
+                                             <li data-i18n="input_box"></li>
+                                             <li><span data-i18n="after_transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_recharge"></span></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mod-box mod-cash">
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span data-i18n="authentication"></span></p>
+                                 <a href="./toRealName.html" data-i18n="certification"></a>
+                              </div>
+                              <div class="not-allow toAuth">
+                                 <p class="not-title"><i class="icon icon-unbroken"></i><span class="cash-msg"><span data-i18n="Submitted"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_cash"></span></span></p>
+                                 <a href="javascript:;" data-i18n="certain"></a>
+                              </div>
+                              <div class="allow-cash">
+                                 <div class="cash-box">
+                                    <form class="box-form virtual-cash show">
+                                       <div class="form-group">
+                                          <label data-i18n="wallet_address"></label>
+                                          <div class="dropdown-box">
+                                             <label class="dropdown-txt"><i class="icon icon-down2"></i><span>-- --</span>
+                                                <span class="operate-style wallet-operate wallet-add show" data-type="new-addr" data-i18n="add_address"></span>
+                                             </label>
+                                             <ul class="dropdown-list wallet-list">
+                                                <!-- <li class="active" data-type="mod-addAddr">＋快速添加接收地址</li>
+                                                <li><i class="icon icon-auth"></i>
+                                                   <label><span>（比特币地址1）</span><span class="addr-txt">1LxehBJPCCVqSQAE4iN8wQSvGMBevVP4kW</span></label>
+                                                   <i class="icon icon-del"></i>
+                                                </li>
+                                                <li><i class="icon icon-unauth"></i>
+                                                   <label><span>（比特币地址2）</span><span class="addr-txt">1LxehBJPCCVqSQAE4iN8wQSvGMBevVP4kD</span></label>
+                                                   <i class="icon icon-del"></i>
+                                                </li> -->
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <div class="form-group"><label for="cash-num" data-i18n="Withdrawal"></label><input type="text" id="virCash-num" placeholder="" /></div>
+                                       <div class="form-group trade-box"><label for="buz-pwd" data-i18n="trader_password"></label><input type="password" id="virBuz-pwd" data-i18n="[placeholder]Trade_Pwd" /></div>
+                                       <div class="form-group code-box auth-code gug-code show" data-auth><label for="addr-gug" data-i18n="verification"></label><input type="text" id="addr-gug" data-i18n="[placeholder]enter_goo" />
+                                          <p class="code-tab" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+                                       </div>
+                                       <div class="form-group code-box auth-code phone-code show" data-auth><label for="addr-phone" data-i18n="pho_verify"></label><input type="text" id="addr-phone" data-i18n="enter_verify" />
+                                          <p class="send-code"><button type="button" data-sign="vir-code" data-i18n="send_verify"></button></p>
+                                          <p class="code-tab" data-type="gug"><span data-i18n="switch"></span><span data-i18n="Authenticator"></span></p>
+                                       </div>
+                                       <div class="form-group"><button type="button" class="cash-btn" data-sign="coin" data-i18n="confirm_withdrawal"></button></div>
+                                    </form>
+                                    <ul class="msg-declare cash-notice">
+                                       <li><i class="icon icon-bulb"></i><span data-i18n="Withdrawal_notice"></span></li>
+                                       <li><span data-i18n="sake"></span><span class="txt-name"></span><span data-i18n="artificial"></span></li>
+                                       <li><span data-i18n="accelerate"></span><span class="txt-name"></span><span data-i18n="uncertainty"></span></li>
+                                       <li>3.<span data-i18n="tran"></span> <span class="txt-name"></span><span data-i18n="service_fee"></span></li>
+                                       <li>4.<span data-i18n="tran"></span> <span class="txt-name"></span><span data-i18n="one_time"></span><span class="txt-min"></span><span data-i18n="not_above"></span><span class="txt-limit"></span>。</li>
+                                       <li><span data-i18n="transfer"></span><a href="./cashRechargeLog.html" target="_blank" data-i18n="recharge_record"></a><span data-i18n="view_recharge"></span></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="pagination-box">
+               <ul class="pagination-list"></ul>
+            </div>
+         </div>
+      </div>
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-addBank">
+            <div class="mod-title"><span data-i18n="add_card"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <label data-i18n="name"></label><span class="username"></span><small data-i18n="just_add"></small>
+                  </div>
+                  <div class="form-group">
+                     <label data-i18n="o_bank"></label>
+                     <div class="dropdown-box">
+                        <label class="dropdown-txt"><span class="open-account">--<span data-i18n="Choose_bank"></span>--</span><i class="icon icon-down2"></i></label>
+                        <ul class="dropdown-list bank-list"></ul>
+                     </div>
+                  </div>
+                  <div class="form-group inline-block">
+                     <label for="bank-province" data-i18n="province"></label>
+                     <select id="bank-province" class="select"></select>
+                  </div>
+                  <div class="form-group inline-block">
+                     <label for="bank-city" data-i18n="city"></label>
+                     <select id="bank-city" class="select"></select>
+                  </div>
+                  <div class="form-group"><label for="bank-subbranch" data-i18n="Bank_branch"></label><input type="text" id="bank-subbranch" data-i18n="[placeholder]branch_name" /></div>
+                  <div class="form-group"><label for="bank-number" data-i18n="bank_number"></label><input type="text" id="bank-number" data-i18n="[placeholder]correct_bank" /></div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default" id="add-bank" data-i18n="add"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-delBank">
+            <div class="mod-title"><span data-i18n="Delete_card"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <div class="msg-box">
+                  <p class="msg-txt" data-i18n="confirm_deletion"></p>
+                  <p class="msg-btn">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default del-btn" data-sign="bank" data-i18n="certain"></button>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-addAddr">
+            <div class="mod-title"><span data-i18n="add"></span><span class="currency-name"></span><span data-i18n="addres"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <label data-i18n="receiver_address"></label><input type="text" id="input-address" data-i18n="[placeholder]correct_address" />
+                  </div>
+                  <div class="form-group">
+                     <label data-i18n="tag"></label><input type="text" id="input-tag" data-i18n="label" />
+                  </div>
+                  <div class="form-group auth-btn">
+                     <label data-i18n="apply_certify"></label><input type="checkbox" id="input-auth" /><label id="apply-auth" for="input-auth" data-i18n="invoked"></label>
+                  </div>
+                  <div class="form-group form-tips hide">
+                     <label>&nbsp;</label><label class="txt-tips">请先<a href="./set-buzPwd.html">设置交易密码</a>并且绑定<a href="./bind-phone.html">手机号码</a>或者<a href="./set-gugValidate.html">谷歌验证</a></label>
+                  </div>
+
+                  <div class="form-group auth-box">
+                     <label for="input-tradePwd" data-i18n="trader_password"></label><input type="password" id="input-tradePwd" data-i18n="[placeholder]Trade_Pwd" /></div>
+                  <div class="form-group auth-box code-box" data-auth>
+                     <label for="input-gug" data-i18n="verification"></label><input type="text" id="input-gug" data-i18n="[placeholder]enter_goo" />
+                     <p class="code-tab" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+                  </div>
+                  <div class="form-group auth-box code-box" data-auth>
+                     <label for="input-phone" data-i18n="pho_verify"></label><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+                     <p class="send-code"><button type="button" data-sign="addr-code" data-i18n="send_verify"></button></p>
+                     <p class="code-tab" data-type="gug"><span data-i18n="switch"></span><span data-i18n="Authenticator"></span></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default" id="add-addr" data-i18n="add"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-delAddr">
+            <div class="mod-title"><span data-i18n="delete_wallet"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <div class="msg-box">
+                  <p class="msg-txt" data-i18n="confirm_wallet"></p>
+                  <p class="msg-btn">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default del-btn" data-sign="address" data-i18n=certain></button>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt2">
+            <div class="mod-title"><span data-i18n="prompt"></span><a href="./toRealName.html" class="icon icon-close" data-action="close"></a></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"><span data-i18n="skip"></span><a href="./toRealName.html" data-i18n="real_page"></a><span data-i18n="automaty"></span><span class="countdown">4</span>s</p>
+               <p class="tips-btn">
+                  <a href="./toRealName.html" class="btn btn-default" data-i18n="certification"></a>
+               </p>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/jquery.qrcode.js"></script>
+   <!--<script src="./js/jquery.zclip.js"></script>-->
+   <script src="./js/clipboard.min.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/market.js"></script>
+</body>
+</html>

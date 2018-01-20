@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="conlog"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-loginLog">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-log2"></i><span data-i18n="conlog"></span></div>
+            <div class="other-body other-body2">
+               <div class="log-box">
+                  <table class="log-table">
+                     <thead>
+                        <tr>
+                           <th data-i18n="logon_time"></th>
+                           <th data-i18n="login_iP"></th>
+                           <th data-i18n="login_address"></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- <tr>
+                           <td>2017-01-02 13:12:32</td>
+                           <td>113.225.21.174</td>
+                           <td>
+                              <span class="province">上海</span>
+                              <span class="city">上海</span>
+                              <span class="area"></span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>2017-01-02 12:31:44</td>
+                           <td>112.223.12.133</td>
+                           <td>
+                              <span class="province">江苏</span>
+                              <span class="city">苏州</span>
+                              <span class="area">昆山</span>
+                           </td>
+                        </tr> -->
+                     </tbody>
+                  </table>
+                  <div class="pagination-box">
+                     <ul class="pagination-list"></ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

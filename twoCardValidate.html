@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="phone_google"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <form class="login-box ls validate-box" id="register-box" onsubmit="return false">
+            <h2 class="box-title" data-i18n="authenty"></h2>
+            <div class="box-input box-auth hide">
+               <i class="icon icon-gug4"></i><input type="text" id="input-gug" data-i18n="[placeholder]enter_goo" />
+               <p class="code-tab" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="code_empty"></span></div>
+            </div>
+            <div class="box-input box-auth hide">
+               <i class="icon icon-bubble"></i><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+               <p class="send-code"><button type="button" data-sign="addr-code" data-i18n="send_verify"></button></p>
+               <p class="code-tab" data-type="gug"><span data-i18n="switch"></span><span data-i18n="Authenticator"></span></p>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="code_empty"></span></div>
+            </div>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-auth" data-i18n="Submit_verified"></button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div id="mask">
+      <div class="mod-box mod2" id="mod-prompt">
+         <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+         <div class="mod-body tips-box">
+            <p class="tips-txt"></p>
+            <p class="tips-btn">
+               <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+            </p>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>

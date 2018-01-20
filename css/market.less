@@ -1,0 +1,336 @@
+@import './sign.less';
+.markets{min-width: 1200px; position: relative;
+   #content{background-color: #f5f5f5; width: 100%; padding: 20px 0;
+      >.ctt{.width(1200px); margin-bottom: 30px; position: relative;
+         &:last-child{margin-bottom: 0;}
+         &.c01{background-color: #fff; border-top: 2px solid @blue; height: 134px; text-align: center;
+            >li{display: inline-block; margin-right: 96px; padding-top: 34px;
+               &:nth-child(3){margin-right: 0;}
+               &:last-child{
+                  >label{border-right: 0; padding-right: 0;}
+               }
+               >img,>label{display: block; float: left;}
+               >label{ border-right: 1px solid #e6e6e6; padding-right: 100px; line-height: 30px; text-align: left;
+                  >span{display: block; padding-left: 10px;
+                     &.coin-txt{font-size: 14px; text-indent: 4px;}
+                     &.coin-num{ color: @blue; font-size: 22px; font-weight: 700;}
+                  }
+               }
+               &:after{.after;}
+            }
+         }
+         .ctt-tab{
+            &:after{.after;}
+            >li{background-color: #fff; color: #999; cursor: pointer; float: left; font-size: 12px; height: 30px; line-height: 30px; padding: 0; width: 239px; margin-right: 2px; transition: all .3s linear; text-align: center;
+               &:last-child{margin-right: 0;}
+               &:hover,&.active{background-color: @blue; color: #fff;}
+               >span{
+                  &:first-child{padding-right: 5px;}
+               }
+            }
+         }
+         &.c02{
+            >.top5-box{ background-color: #fff; border-top: 2px solid @blue; padding:10px;
+               >ul{display: none;
+                  >li{background-color: #f0f3f5; float: left; margin-right: 20px; width: 220px;
+                     &:last-child{margin-right: 0;}
+                     >label{display: block; border-right: 1px solid #fff; border-bottom: 1px solid #fff; box-sizing: border-box; float: left; height: 56px; padding-top: 11px; position: relative; text-align: center; width: 110px;
+                        &:first-child{background: url(../imgs/icon-hot.png) no-repeat;}
+                        &:nth-child(2n){ border-right: 0;}
+                        >i{
+                           &:first-child{color: #fff; position: absolute; left: 9px; top: 6px; font-size: 12px;}
+                           &:last-child{display: inline-block;}
+                        }
+                        >span{display: block;
+                           &.red{color: @red;}
+                           &.blue{color: @blue;}
+                           &.green{color: @green;}
+                           &:first-child{ color: #999; font-size: 12px;}
+                           &:last-child{font-size: 14px;}
+                        }
+                     }
+                  }
+                  &:after{.after;}
+               }
+            }
+         }
+         &.c03{margin-bottom: 0;
+            .currency-box{background-color: #fff;
+               >table{
+                  >tbody{
+                     >tr{
+                        &:hover{background-color: @blue-hover;
+                           >td{color: #fff !important;
+                              >span{color: #fff !important;}
+                              >a{color: #fff !important;}
+                           }
+                        }
+                     }
+                  }
+               }
+               .pagination-box{padding: 10px; text-align: right;}
+            }
+         }
+      }
+      >.my-capital{
+         >.capital-top{background-color: #fff; color: #333; font-size: 24px; height: 100px; line-height: 100px; margin-bottom: 20px; text-align: center;
+            >*{vertical-align: middle;}
+            >span{padding-left: 10px;}
+         }
+         >.filter-box{position: relative; margin: 30px 0 8px;
+            >label{color: #425461; cursor: pointer; font-size: 12px;
+               &:nth-child(2){margin-left: 40px;}
+               >*{vertical-align: middle;}
+               >span{padding-left: 5px;}
+            }
+            >.search-input{right: 0; top: -4px;}
+         }
+         >.table-currency{
+            >tbody{
+               >tr{cursor: default;
+                  &.active{background-color: #edf5fa;}
+                  >td{
+                     >a{color: #425461; text-decoration: underline;
+                        &:first-child{padding-right: 10px;}
+                        &.on{color: @blue;}
+                     }
+                  }
+                  &.actionArrow{ background-color: #edf5fa; display: none;
+                     &.show{display: table-row !important;}
+                     >td{padding: 0 20px 20px; text-align: center;
+                        >.box-style{display: none;
+                           >.mod-box{background-color: #fff; display: none; height: 300px; width: 100%; position: relative;
+                              &:after{content: ''; border: 7px solid transparent; border-bottom: 7px solid #fff; height: 0; position: absolute; right: 4%; top: -13px;}
+                              &.mod-cash{
+                                 &:after{right: 1%;}
+                                 .cash-msg{color: #425461;
+                                    >a{color: @blue;}
+                                 }
+                              }
+                              >.toAuth{display: none; text-align: center;
+                                 >p{ color: @blue; font-size: 14px; padding-top: 90px; padding-bottom: 30px; text-align: center;
+                                    >*{vertical-align: middle;}
+                                    >span{padding-left: 10px;}
+                                 }
+                                 >a{border: 1px solid @blue-hover; border-radius: 5px; background-color: #fff; color: @blue; cursor: pointer; display: inline-block; height: 28px; line-height: 28px; width: 156px;
+                                    &:hover{background-color: #f2faff;}
+                                 }
+                              }
+                              >.allow-recharge,>.allow-cash{display: none; position: relative;}
+                              >.allow-recharge{padding-top: 50px;
+                                 &.virtual-rechargeBox{padding-top: 18px;}
+                                 >.recharge-tab{position: absolute; left: 30%; top: 21px;
+                                    &:after{.after;}
+                                    >li{ background-color: #edf5fa; border: 1px solid #cfdce6; cursor: pointer; float: left; height: 28px; line-height: 28px; margin-right: 20px; width: 124px; position: relative; text-align: center;
+                                       &:last-child{margin-right: 0;}
+                                       >i{ display: none; position: absolute; top: -12px; right: -12px;}
+                                       &:hover,&.on{background-color: #fff; border-bottom: 1px solid #fff;}
+                                    }
+                                 }
+                                 >.recharge-boxs{border:1px solid #cfdce6; margin: 0 100px; padding-top: 20px; padding-bottom: 11px;
+                                    >.recharge-box{display: none;
+                                       &:first-child{
+                                          >.items-box{
+                                             >.box-form{
+                                                .commit-apply{margin-bottom: 24px;}
+                                             }
+                                          }
+                                       }
+                                       >.items-box{display: none;
+                                          >.box-form,>.msg-declare,>.alipay-table{float: left; margin-left: 50px;}
+                                          >.alipay-table{width: 440px; margin-top: -10px;
+                                             &.bank-alipay{width: 330px; margin-left: 90px;
+                                                >tbody{
+                                                   >tr{
+                                                      >td{height: 30px;}
+                                                   }
+                                                }
+                                             }
+                                             >caption{ color: #425461; font-size: 14px; margin-bottom: 10px; text-align: left;}
+                                             >tbody{
+                                                >tr{
+                                                   >td{border: 1px solid #688599;
+                                                      &:first-child{background-color: #edf5fa; color: #688599; padding-right: 10px; text-align: right;}
+                                                      &:nth-child(2){padding-left: 10px;}
+                                                      &.alipay-img{ height: 154px; width: 150px; text-align: center;}
+                                                      >span{color: #e95500; font-weight: 700;}
+                                                   }
+                                                }
+                                             }
+                                          }
+                                          .cs-box{margin-top: 16px;}
+                                       }
+                                       &:after{.after;}
+                                    }
+                                 }
+                              }
+                              >.allow-cash{padding-top: 18px;
+                                 >.cash-box{border:1px solid #cfdce6; margin: 0 100px;
+                                    .box-form{padding-left: 45px; padding-top: 10px;
+                                       >.form-group{position: relative; margin-bottom: 10px;
+                                          >.dropdown-box{display: inline-block;}
+                                       }
+                                    }
+                                    .cash-notice{padding-top: 60px;}
+                                    &:after{.after;}
+                                 }
+                              }
+                              .box-form,.msg-declare{float: left;}
+                              .box-form{width: 440px;
+                                 >.form-group{margin-bottom: 10px;
+                                    &.code-box{display: none;position: relative;
+                                       &.phone-code{
+                                          >input{ padding-right: 137px; width: 200px;}
+                                       }
+                                       >.send-code{color: @blue; cursor: pointer; font-size: 12px; padding: 0 20px; position: absolute; top: 1px; right: 0px; height: 38px; line-height: 38px;
+                                          >button{ background-color: transparent; border: none; border-left: 1px solid #cfdce6; cursor: pointer; padding-left: 20px;
+                                             &:disabled{cursor: not-allow;}
+                                          }
+                                       }
+                                       >.code-tab{text-align: right; position: absolute; right: 14px; bottom: -18px; z-index: 3;
+                                          >span{color: @blue; cursor: pointer;}
+                                       }
+                                    }
+                                    >#qrcode{text-align: center;}
+                                    &.auth-code{display: none !important;}
+                                    &.recharge-step{margin-left: 40px;
+                                       >li{display: inline-block; margin-right: 40px; position: relative; width: 100px;
+                                          >i{ border: 1px solid #425461; border-radius: 6px; position: absolute; left: -18px; top: 15px; height: 11px; line-height: 11px; width: 11px; text-align: center;}
+                                          >span{background-color: #edf5fa; display: inline-block; padding: 6px 12px;}
+                                          &:after{content: ''; border: 8px solid transparent; border-left-color: #edf5fa; position: absolute; right: -16px; top: 14px;}
+                                          &:last-child{margin-right: 0;
+                                             &:after{border: none;}
+                                          }
+                                       }
+                                       &:after{.after;}
+                                    }
+                                    &:first-child{margin-bottom: 20px;}
+                                    &:last-child{margin-bottom: 0; text-align: center;}
+                                    >*{vertical-align: middle;}
+                                    >button{background-color: @blue; border: none; border-radius: 5px; color: #fff; cursor: pointer; display: inline-block; height: 30px; line-height: 26px; width: 158px;
+                                       &:hover{background-color: @blue-hover;}
+                                       &:active{transform:translateY(2px);}
+                                       &#alipay-recharge{margin-top: 20px;}
+                                       &.cash-btn{margin-top: 10px;}
+                                       &#copy-addr{background-color: #fff; border: 1px solid @blue; color: @blue;}
+                                    }
+                                    .re-cs{background: url(../imgs/recharge-cs.png) no-repeat; display: inline-block; height: 30px; margin-left: 5px; width: 108px;}
+                                    >label{color: #425461; display: inline-block; font-size: 12px; padding-right: 5px; width: 72px; text-align: right;
+                                    }
+                                    >.username{font-size: 16px;}
+                                    >small{color: #688599; font-size: 12px;}
+                                    >input{ border: 1px solid #cfdce6; box-shadow: inset 2px 3px 4px rgba(207,220,230,.2); font-size: 12px; height: 38px; padding-left: 10px; padding-right:20px; width: 317px;
+                                       &:focus{border: 1px solid @blue; box-shadow: inset 2px 3px 4px rgba(14, 125, 204, 0.2);}
+                                    }
+                                    >.errors{ color: @red; display: inline-block; vertical-align: top;}
+                                 }
+                              }
+                              .msg-declare{width: 380px;
+                                 &.transfer,&.remit{margin-top: 20px;}
+                                 &.cash-notice{margin-left: 50px;
+                                    >li{
+                                       >span{color: #425461;}
+                                    }
+                                 }
+                                 &.remit{margin-left: 90px;}
+                                 >li{color: #688599; font-size: 12px; margin-bottom: 5px;
+                                    &:first-child{margin-bottom: 13px;
+                                       >*{vertical-align: middle;}
+                                       >span{color: #425461; padding-left: 5px;}
+                                    }
+                                    >a{color: @blue;
+                                       &:hover{text-decoration: underline;}
+                                    }
+                                    &:last-child{margin-bottom: 0;}
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         >.pagination-box{background-color: #fff; padding: 20px 0; text-align: center;}
+      }
+      .table-currency{border: 1px solid #fff; border-top: 2px solid @blue; display: none;
+         &#assets-table{
+            >tbody{
+               >tr{
+                  >td{
+                     &:last-child{width: 86px; text-align: left;}
+                  }
+               }
+            }
+         }
+         &.show{display: table !important;}
+         >thead{
+            >tr{background-color: #fff;
+               >th{color: #333; font-size: 12px; font-weight: 400; padding: 12px 0;text-align: right; /*padding-right: 50px;*/ padding-right: 40px;
+                  &:first-child,&:last-child{text-align: center; padding-right: 0;}
+               }
+            }
+         }
+         >tbody{
+            >tr{cursor: pointer;
+               /* &.up{background-color: #bbdfb2;}
+               &.down{background-color: #ffdfcd;} */
+               &:nth-child(odd){background-color: #f7f9fa;}
+               &:nth-child(even){background-color: #fcfeff;}
+               >td{color: #425461; font-size: 12px; height: 40px; /*padding-right: 50px;*/ padding-right: 50px; text-align: right;
+                  &:first-child{text-align: left; padding-left: 20px; padding-right: 0;
+                     >*{vertical-align: middle;}
+                     >span{
+                        &:nth-child(2){padding:0 5px;}
+                     }
+                     >a{color: #7099b6;}
+                  }
+                  &.red{color: @red;}
+                  &.green{color: @green;}
+                  &:last-child{text-align: center; padding-right: 0;}
+               }
+            }
+         }
+      }
+   }
+   .search-input{position: absolute; right: 10px; top: -5px;
+      &.active{
+         >i{display: none;}
+         >input{ padding-left: 6px; width: 200px;}
+      }
+      >i{position: absolute; top: 8px; left: 8px;}
+      >input{ border: 1px solid #e6e6e6; border-radius: 5px; font-size: 14px; height: 16px; padding: 6px; padding-left: 31px; width: 118px; transition: all .3s linear;
+         &:focus{border: 1px solid @blue; box-shadow: 0 0 5px rgba(14,125,204,.5);}
+      }
+   }
+   .dropdown-box{display: inline-block; position: relative; margin-left: -3px;
+      >.dropdown-txt{border: 1px solid #cfdce6; box-shadow: inset 3px 3px 2px #eff4f7; display: inline-block; height: 20px; padding: 9px 10px; position: relative; width: 328px;
+         >*{vertical-align: middle; font-size: 12px;}
+         >.txt-num{padding-left: 5px;}
+         >.icon-auth,>.icon-unauth{margin-right: 10px;}
+         >.icon-down2{float: right; margin-top: 8px;}
+         >.operate-style{ border-left: 1px solid #cfdce6; display: none; color: @blue; font-size: 12px; padding-left: 3%; position: absolute; right: 8%; top: 28%;
+         }
+      }
+      >.dropdown-list{border: 1px solid #cfdce6; display: none; position: absolute; top: 44px; left: -1px; max-height: 280px; overflow-y: auto; width: 100%; z-index: 4;
+         &.on{display: block;}
+         &.wallet-list{
+            >li{
+               >label{display: inline-block; font-size: 12px; padding-left: 4px;
+                  >span{display: block;
+                     &:first-child{color: @blue-hover;}
+                  }
+               }
+               >.icon-del{margin-top: 5px; position: absolute; right: 4px; z-index: 5;}
+            }
+         }
+         >li{ border-bottom: 1px solid #edf4fa; cursor: pointer; background-color: #fff; font-size: 14px; padding: 8px 10px;
+            &:last-child{border-bottom: none;}
+            >*{vertical-align: middle;}
+            >.bankname{padding-left: 9px; padding-right: 16px;}
+            >.icon-del{float: right;}
+            &:hover,&.active{background-color: #edf5fa; color: @blue-hover;}
+         }
+      }
+   }
+}

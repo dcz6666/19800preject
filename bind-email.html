@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="binding_mailbox"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <form class="login-box bind-box" id="register-box">
+            <div class="box-title" data-i18n="binding_mailbox"></div>
+            <div class="box-input box-style">
+               <i class="icon icon-user2"></i><span data-i18n="account1"></span><label class="account"></label>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-email"></i><input type="text" id="email" data-i18n="[placeholder]enter_email" tabindex="1" autofocus />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="Registration"></span></div>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-bubble"></i><input type="text" id="msg-code" class="input-validate" data-i18n="[placeholder]email_verify" tabindex="2" />
+               <button type="button" class="btn-msg" data-type="email" data-i18n="button"></button>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="email_blank"></span></div>
+            </div>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-bind" data-type="email" data-i18n="bind"></button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div id="mask">
+      <div class="mod-box mod1" id="mod-bind">
+         <div class="mod-title"><i class="icon icon-smile"></i><span data-i18n="bind_succeed"></span></div>
+         <div class="mod-body">
+            <!-- <p data-i18n="return"><a href="./toSafeSet.html" data-i18n="safe_setting"></a></p> -->
+         </div>
+         <div class="mod-btn">
+            <a href="./toSafeSet.html" class="btn btn-default" data-i18n="certain"></a>
+         </div>
+      </div>
+      <div class="mod-box mod1" id="mod-error">
+         <div class="mod-title"><i class="icon icon-sad"></i><span data-i18n="bind_failed"></span></div>
+         <div class="mod-body">
+            <p class="errorMsg"></p>
+         </div>
+         <div class="mod-btn">
+            <button class="btn btn-default" data-action="close" data-i18n="certain"></button>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="recharge_record"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css" />
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap recharge-cash">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-order2"></i><span data-i18n="recharge_record"></span></div>
+            <div class="other-body">
+               <ul class="tab-change" data-sign="currency">
+                  <li class="on" data-i18n="cny"></li>
+                  <li data-i18n="virtual_currency"></li>
+               </ul>
+               <div class="other-tables">
+                  <div class="log-table show">
+                     <ul class="tab-logs">
+                        <li class="on" data-i18n="echarge_record"></li>
+                        <li data-i18n="Withdrawal_record"></li>
+                     </ul>
+                     <!-- <h4 class="table-title"></h4> -->
+                     <table class="table-log table-1th" id="log-first">
+                        <thead>
+                           <tr>
+                              <th data-i18n="time"></th>
+                              <th data-i18n="pre_paid"></th>
+                              <th class="th-num" data-i18n="recharge_amount"></th>
+                              <th data-i18n="state"></th>
+                              <th data-i18n="description"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <!-- <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td>支付宝</td>
+                              <td class="txt-price txt-right">8000.00</td>
+                              <td>成功</td>
+                              <td class="txt-price">66878</td>
+                           </tr>
+                           <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td>支付宝</td>
+                              <td class="txt-price txt-right">8000.00</td>
+                              <td>待处理</td>
+                              <td class="txt-price">66878</td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                     <!-- <h4 class="table-title"></h4> -->
+                     <table class="table-log table-2th hide" id="log-second">
+                        <thead>
+                           <tr>
+                              <th data-i18n="time"></th>
+                              <th data-i18n="Withdrawal_way"></th>
+                              <th data-i18n="show_user"></th>
+                              <th class="th-num" data-i18n="cash_withdrawal"></th>
+                              <th data-i18n="state"></th>
+                              <th data-i18n="description"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <!-- <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td>支付宝</td>
+                              <td><span class="txt-aName">张三</span><span class="txt-aNum">13364852666</span></td>
+                              <td class="txt-price txt-right">8000.00</td>
+                              <td>成功</td>
+                              <td><a href="javascript:;">查看详情</a></td>
+                           </tr>
+                           <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td>支付宝</td>
+                              <td>张三 13364852666</td>
+                              <td class="txt-price txt-right">8000.00</td>
+                              <td><span>待处理</span>（<a href="javascript:;">撤销</a>）</td>
+                              <td class="txt-price">77889</td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                     <div class="pagination-box">
+                        <ul class="pagination-list"></ul>
+                     </div>
+                     <!-- <div class="pagination-box">
+                        <ul class="pagination-list pagination-list2"></ul>
+                     </div> -->
+                  </div>
+                  <div class="log-table">
+                     <ul class="tab-logs">
+                        <li class="on" data-i18n="echarge_record"></li>
+                        <li data-i18n="Withdrawal_record"></li>
+                     </ul>
+                     <table class="table-log table-2th" id="log-third">
+                        <thead>
+                           <tr>
+                              <th data-i18n="time"></th>
+                              <th data-i18n="currency"></th>
+                              <th class="th-num" data-i18n="recharge_quantity"></th>
+                              <th class="th-num2" data-i18n="state"></th>
+                              <th data-i18n="confirm_times"></th>
+                              <th data-i18n="description"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <!-- <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td><i class="icon icon-circle"></i><span class="txt-currency">新赛波币</span><span class="txt-sign">NBC</span></td>
+                              <td class="txt-price txt-right">8000.00</td>
+                              <td>成功</td>
+                              <td><span class="txt-price ok-num">386</span>/<span class="safe-num">386</span></td>
+                              <td><a href="javascript:;">查看详情</a></td>
+                           </tr>
+                           <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td><i class="icon icon-circle"></i><span class="txt-currency">开普勒币</span><span class="txt-sign">KPC</span></td>
+                              <td class="txt-price txt-right">9504.38</td>
+                              <td>待处理（<span class="txt-price quickIntoAccount">快速到账</span>）</td>
+                              <td><span class="txt-price ok-num">134</span>/<span class="safe-num">386</span></td>
+                              <td><a href="javascript:;">查看详情</a></td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                     <table class="table-log table-2th hide" id="log-fourth">
+                        <thead>
+                           <tr>
+                              <th data-i18n="time"></th>
+                              <th data-i18n="currency"></th>
+                              <th class="th-num" data-i18n="withdrawal_amount"></th>
+                              <th class="th-num2" data-i18n="withdrawal_address"></th>
+                              <th data-i18n="state"></th>
+                              <th data-i18n="description"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <!-- <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td><i class="icon icon-circle"></i><span class="txt-currency">新赛波币</span><span class="txt-sign">NBC</span></td>
+                              <td class="txt-price txt-right">3418211.21</td>
+                              <td>1NvRogVQjRcuhuoZuhzPkNzykSxpVpM75a</td>
+                              <td>成功</td>
+                              <td><a href="javascript:;">查看详情</a></td>
+                           </tr>
+                           <tr>
+                              <td>2017-01-02 13:12:21</td>
+                              <td><i class="icon icon-circle"></i><span class="txt-currency">开普勒币</span><span class="txt-sign">KPC</span></td>
+                              <td class="txt-price txt-right">3418211.21</td>
+                              <td>1NvRogVQjRcuhuoZuhzPkNzykSxpVpM75a</td>
+                              <td><span>待处理</span>（<a href="javascript:;">撤销</a>）</td>
+                              <td><a href="javascript:;">查看详情</a></td>
+                           </tr> -->
+                        </tbody>
+                     </table>
+                     <div class="pagination-box">
+                        <ul class="pagination-list pagination-list2"></ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-bail">
+            <div class="mod-title"><span data-i18n="guarantee"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <label for="bail-currency" data-i18n="guarantee_currency"></label>
+                     <ul class="info-box currency-list tab-change" data-sign="bail">
+                        <li class="on">CNY</li>
+                        <li>BTC</li>
+                        <li>ETH</li>
+                     </ul>
+                  </div>
+                  <div class="form-group">
+                     <label for="bail-num" data-i18n="mortgage"></label>
+                     <div class="info-box">
+                        <input type="text" id="bail-num" readonly placeholder="0.00" />
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="bail-num" data-i18n="agreement"></label>
+                     <div class="info-box">
+                        <label><input type="checkbox" id="is-apply" /><span data-i18n="made_reading"></span><a href="javascript:;" data-i18n="agreement"></a></label>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="bail-num" data-i18n="explain"></label>
+                     <ul class="info-box bail-explain">
+                        <li data-i18n="deposit"></li>
+                        <li data-i18n="margin_frost"></li>
+                     </ul>
+                  </div>
+                  <div class="form-group tc">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default" id="to-bail" data-sign="submit" data-i18n="guarantee_confirm"></button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt" data-i18n="cancel_withdrawal"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                  <button type="button" class="btn btn-default" id="to-cancel" data-i18n="revocation"></button>
+               </p>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt2">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

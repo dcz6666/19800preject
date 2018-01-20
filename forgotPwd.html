@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="login_password"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <form class="login-box commit-box" id="register-box" onSubmit="return false">   
+            <div class="box-title" data-i18n="login_password"></div>
+            <div class="box-input">
+               <i class="icon icon-user2"></i><input type="text" id="user" class="certify-type" data-i18n="[placeholder]phone_email" tabindex="1" autofocus />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="content_empty"></span></div>
+            </div>
+            <div class="box-input hide">
+               <i class="icon icon-id"></i><input type="text" id="card" data-i18n="[placeholder]id_card" tabindex="2" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="content_empty"></span></div>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-validate"></i><input type="text" id="code" class="input-validate" data-i18n="[placeholder]enter_code" tabindex="3" /><img src="http://10.0.0.218:7898/common/Captcha" id="pic-captcha" data-i18n="refresh" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="code_empty"></span></div>
+            </div>
+            <div class="box-input msg-show hide">
+               <i class="icon icon-bubble"></i><input type="text" id="msg-code" class="input-validate" data-i18n="[placeholder]enter_sms" tabindex="4"/>
+               <button type="button" class="btn-msg btn-return" data-type="msg" data-i18n="button"></button>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="sms_verify"></span></div>
+            </div>
+            <div class="box-input msg-show hide">
+               <i class="icon icon-email"></i><input type="text" id="email-code" class="input-validate" data-i18n="[placeholder]enter_sms" tabindex="4"/>
+               <button type="button" class="btn-msg btn-return aa" data-type="email" data-i18n="button"></button>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="sms_verify"></span></div>
+            </div>
+            <div class="box-input hide">
+               <i class="icon icon-gug4"></i><input type="text" id="google" data-i18n="[placeholder]enter_goo" tabindex="4" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="content_empty"></span></div>
+            </div>
+            <div class="box-radio code-verity">
+               <label class="hide"><input type="radio" name="code" value="1"><span>手机验证</span></label>
+               <label class="hide"><input type="radio" name="code" value="2"><span>邮箱验证</span></label>
+               <label class="hide"><input type="radio" name="code" value="3"><span>谷歌验证</span></label>
+            </div>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-commit" data-i18n="submit"></button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div id="mask">
+      <div class="mod-box mod1" id="mod-tips">
+         <div class="mod-title"><i class="icon icon-smile"></i><span data-i18n="application"></span></div>
+         <div class="mod-body">
+            <p><span data-i18n="request"></span><a href="javascript:;" class="getLoginEmail" target="_blank" data-i18n="mailbox"></a><span data-i18n="password_set">,</span></p>
+         </div>
+         <div class="mod-btn">
+            <a href="javascript:;" class="btn btn-default" id="ok" data-i18n="certain"></a>
+         </div>
+      </div>
+      <div class="mod-box mod1" id="mod-error">
+         <div class="mod-title"><i class="icon icon-sad"></i><span data-i18n="password_failed"></span></div>
+         <div class="mod-body">
+            <p class="errorText"></p>
+         </div>
+         <div class="mod-btn">
+            <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>

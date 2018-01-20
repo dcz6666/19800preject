@@ -1,0 +1,870 @@
+.markets {
+  min-width: 1200px;
+  position: relative;
+}
+.markets #content {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 20px 0;
+}
+.markets #content > .ctt {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+}
+.markets #content > .ctt:last-child {
+  margin-bottom: 0;
+}
+.markets #content > .ctt.c01 {
+  background-color: #fff;
+  border-top: 2px solid #0e7dcc;
+  height: 134px;
+  text-align: center;
+}
+.markets #content > .ctt.c01 > li {
+  display: inline-block;
+  margin-right: 96px;
+  padding-top: 34px;
+}
+.markets #content > .ctt.c01 > li:nth-child(3) {
+  margin-right: 0;
+}
+.markets #content > .ctt.c01 > li:last-child > label {
+  border-right: 0;
+  padding-right: 0;
+}
+.markets #content > .ctt.c01 > li > img,
+.markets #content > .ctt.c01 > li > label {
+  display: block;
+  float: left;
+}
+.markets #content > .ctt.c01 > li > label {
+  border-right: 1px solid #e6e6e6;
+  padding-right: 100px;
+  line-height: 30px;
+  text-align: left;
+}
+.markets #content > .ctt.c01 > li > label > span {
+  display: block;
+  padding-left: 10px;
+}
+.markets #content > .ctt.c01 > li > label > span.coin-txt {
+  font-size: 14px;
+  text-indent: 4px;
+}
+.markets #content > .ctt.c01 > li > label > span.coin-num {
+  color: #0e7dcc;
+  font-size: 22px;
+  font-weight: 700;
+}
+.markets #content > .ctt.c01 > li:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .ctt .ctt-tab:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .ctt .ctt-tab > li {
+  background-color: #fff;
+  color: #999;
+  cursor: pointer;
+  float: left;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  width: 239px;
+  margin-right: 2px;
+  transition: all .3s linear;
+  text-align: center;
+}
+.markets #content > .ctt .ctt-tab > li:last-child {
+  margin-right: 0;
+}
+.markets #content > .ctt .ctt-tab > li:hover,
+.markets #content > .ctt .ctt-tab > li.active {
+  background-color: #0e7dcc;
+  color: #fff;
+}
+.markets #content > .ctt .ctt-tab > li > span:first-child {
+  padding-right: 5px;
+}
+.markets #content > .ctt.c02 > .top5-box {
+  background-color: #fff;
+  border-top: 2px solid #0e7dcc;
+  padding: 10px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul {
+  display: none;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li {
+  background-color: #f0f3f5;
+  float: left;
+  margin-right: 20px;
+  width: 220px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li:last-child {
+  margin-right: 0;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label {
+  display: block;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  float: left;
+  height: 56px;
+  padding-top: 11px;
+  position: relative;
+  text-align: center;
+  width: 110px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label:first-child {
+  background: url(../imgs/icon-hot.png) no-repeat;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label:nth-child(2n) {
+  border-right: 0;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > i:first-child {
+  color: #fff;
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  font-size: 12px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > i:last-child {
+  display: inline-block;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span {
+  display: block;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span.red {
+  color: #2c9b00;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span.blue {
+  color: #0e7dcc;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span.green {
+  color: #e95500;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span:first-child {
+  color: #999;
+  font-size: 12px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul > li > label > span:last-child {
+  font-size: 14px;
+}
+.markets #content > .ctt.c02 > .top5-box > ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .ctt.c03 {
+  margin-bottom: 0;
+}
+.markets #content > .ctt.c03 .currency-box {
+  background-color: #fff;
+}
+.markets #content > .ctt.c03 .currency-box > table > tbody > tr:hover {
+  background-color: #42a5ec;
+}
+.markets #content > .ctt.c03 .currency-box > table > tbody > tr:hover > td {
+  color: #fff !important;
+}
+.markets #content > .ctt.c03 .currency-box > table > tbody > tr:hover > td > span {
+  color: #fff !important;
+}
+.markets #content > .ctt.c03 .currency-box > table > tbody > tr:hover > td > a {
+  color: #fff !important;
+}
+.markets #content > .ctt.c03 .currency-box .pagination-box {
+  padding: 10px;
+  text-align: right;
+}
+.markets #content > .my-capital > .capital-top {
+  background-color: #fff;
+  color: #333;
+  font-size: 24px;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.markets #content > .my-capital > .capital-top > * {
+  vertical-align: middle;
+}
+.markets #content > .my-capital > .capital-top > span {
+  padding-left: 10px;
+}
+.markets #content > .my-capital > .filter-box {
+  position: relative;
+  margin: 30px 0 8px;
+}
+.markets #content > .my-capital > .filter-box > label {
+  color: #425461;
+  cursor: pointer;
+  font-size: 12px;
+}
+.markets #content > .my-capital > .filter-box > label:nth-child(2) {
+  margin-left: 40px;
+}
+.markets #content > .my-capital > .filter-box > label > * {
+  vertical-align: middle;
+}
+.markets #content > .my-capital > .filter-box > label > span {
+  padding-left: 5px;
+}
+.markets #content > .my-capital > .filter-box > .search-input {
+  right: 0;
+  top: -4px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr {
+  cursor: default;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.active {
+  background-color: #edf5fa;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr > td > a {
+  color: #425461;
+  text-decoration: underline;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr > td > a:first-child {
+  padding-right: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr > td > a.on {
+  color: #0e7dcc;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow {
+  background-color: #edf5fa;
+  display: none;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow.show {
+  display: table-row !important;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td {
+  padding: 0 20px 20px;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style {
+  display: none;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box {
+  background-color: #fff;
+  display: none;
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box:after {
+  content: '';
+  border: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  height: 0;
+  position: absolute;
+  right: 4%;
+  top: -13px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box.mod-cash:after {
+  right: 1%;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box.mod-cash .cash-msg {
+  color: #425461;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box.mod-cash .cash-msg > a {
+  color: #0e7dcc;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth {
+  display: none;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth > p {
+  color: #0e7dcc;
+  font-size: 14px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth > p > * {
+  vertical-align: middle;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth > p > span {
+  padding-left: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth > a {
+  border: 1px solid #42a5ec;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #0e7dcc;
+  cursor: pointer;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  width: 156px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .toAuth > a:hover {
+  background-color: #f2faff;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash {
+  display: none;
+  position: relative;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge {
+  padding-top: 50px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge.virtual-rechargeBox {
+  padding-top: 18px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab {
+  position: absolute;
+  left: 30%;
+  top: 21px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab > li {
+  background-color: #edf5fa;
+  border: 1px solid #cfdce6;
+  cursor: pointer;
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 20px;
+  width: 124px;
+  position: relative;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab > li:last-child {
+  margin-right: 0;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab > li > i {
+  display: none;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab > li:hover,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-tab > li.on {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs {
+  border: 1px solid #cfdce6;
+  margin: 0 100px;
+  padding-top: 20px;
+  padding-bottom: 11px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box {
+  display: none;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box:first-child > .items-box > .box-form .commit-apply {
+  margin-bottom: 24px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box {
+  display: none;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .box-form,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .msg-declare,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table {
+  float: left;
+  margin-left: 50px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table {
+  width: 440px;
+  margin-top: -10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table.bank-alipay {
+  width: 330px;
+  margin-left: 90px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table.bank-alipay > tbody > tr > td {
+  height: 30px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > caption {
+  color: #425461;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > tbody > tr > td {
+  border: 1px solid #688599;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > tbody > tr > td:first-child {
+  background-color: #edf5fa;
+  color: #688599;
+  padding-right: 10px;
+  text-align: right;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > tbody > tr > td:nth-child(2) {
+  padding-left: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > tbody > tr > td.alipay-img {
+  height: 154px;
+  width: 150px;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box > .alipay-table > tbody > tr > td > span {
+  color: #e95500;
+  font-weight: 700;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box > .items-box .cs-box {
+  margin-top: 16px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-recharge > .recharge-boxs > .recharge-box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash {
+  padding-top: 18px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box {
+  border: 1px solid #cfdce6;
+  margin: 0 100px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box .box-form {
+  padding-left: 45px;
+  padding-top: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box .box-form > .form-group {
+  position: relative;
+  margin-bottom: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box .box-form > .form-group > .dropdown-box {
+  display: inline-block;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box .cash-notice {
+  padding-top: 60px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box > .allow-cash > .cash-box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare {
+  float: left;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form {
+  width: 440px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group {
+  margin-bottom: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box {
+  display: none;
+  position: relative;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box.phone-code > input {
+  padding-right: 137px;
+  width: 200px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box > .send-code {
+  color: #0e7dcc;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 20px;
+  position: absolute;
+  top: 1px;
+  right: 0px;
+  height: 38px;
+  line-height: 38px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box > .send-code > button {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #cfdce6;
+  cursor: pointer;
+  padding-left: 20px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box > .send-code > button:disabled {
+  cursor: not-allow;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box > .code-tab {
+  text-align: right;
+  position: absolute;
+  right: 14px;
+  bottom: -18px;
+  z-index: 3;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.code-box > .code-tab > span {
+  color: #0e7dcc;
+  cursor: pointer;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > #qrcode {
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.auth-code {
+  display: none !important;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step {
+  margin-left: 40px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li {
+  display: inline-block;
+  margin-right: 40px;
+  position: relative;
+  width: 100px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li > i {
+  border: 1px solid #425461;
+  border-radius: 6px;
+  position: absolute;
+  left: -18px;
+  top: 15px;
+  height: 11px;
+  line-height: 11px;
+  width: 11px;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li > span {
+  background-color: #edf5fa;
+  display: inline-block;
+  padding: 6px 12px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li:after {
+  content: '';
+  border: 8px solid transparent;
+  border-left-color: #edf5fa;
+  position: absolute;
+  right: -16px;
+  top: 14px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li:last-child {
+  margin-right: 0;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step > li:last-child:after {
+  border: none;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group.recharge-step:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group:first-child {
+  margin-bottom: 20px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > * {
+  vertical-align: middle;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button {
+  background-color: #0e7dcc;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  line-height: 26px;
+  width: 158px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button:hover {
+  background-color: #42a5ec;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button:active {
+  transform: translateY(2px);
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button#alipay-recharge {
+  margin-top: 20px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button.cash-btn {
+  margin-top: 10px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > button#copy-addr {
+  background-color: #fff;
+  border: 1px solid #0e7dcc;
+  color: #0e7dcc;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group .re-cs {
+  background: url(../imgs/recharge-cs.png) no-repeat;
+  display: inline-block;
+  height: 30px;
+  margin-left: 5px;
+  width: 108px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > label {
+  color: #425461;
+  display: inline-block;
+  font-size: 12px;
+  padding-right: 5px;
+  width: 72px;
+  text-align: right;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > .username {
+  font-size: 16px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > small {
+  color: #688599;
+  font-size: 12px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > input {
+  border: 1px solid #cfdce6;
+  box-shadow: inset 2px 3px 4px rgba(207, 220, 230, 0.2);
+  font-size: 12px;
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 317px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > input:focus {
+  border: 1px solid #0e7dcc;
+  box-shadow: inset 2px 3px 4px rgba(14, 125, 204, 0.2);
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .box-form > .form-group > .errors {
+  color: #2c9b00;
+  display: inline-block;
+  vertical-align: top;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare {
+  width: 380px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare.transfer,
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare.remit {
+  margin-top: 20px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare.cash-notice {
+  margin-left: 50px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare.cash-notice > li > span {
+  color: #425461;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare.remit {
+  margin-left: 90px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li {
+  color: #688599;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li:first-child {
+  margin-bottom: 13px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li:first-child > * {
+  vertical-align: middle;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li:first-child > span {
+  color: #425461;
+  padding-left: 5px;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li > a {
+  color: #0e7dcc;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li > a:hover {
+  text-decoration: underline;
+}
+.markets #content > .my-capital > .table-currency > tbody > tr.actionArrow > td > .box-style > .mod-box .msg-declare > li:last-child {
+  margin-bottom: 0;
+}
+.markets #content > .my-capital > .pagination-box {
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.markets #content .table-currency {
+  border: 1px solid #fff;
+  border-top: 2px solid #0e7dcc;
+  display: none;
+}
+.markets #content .table-currency#assets-table > tbody > tr > td:last-child {
+  width: 86px;
+  text-align: left;
+}
+.markets #content .table-currency.show {
+  display: table !important;
+}
+.markets #content .table-currency > thead > tr {
+  background-color: #fff;
+}
+.markets #content .table-currency > thead > tr > th {
+  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 12px 0;
+  text-align: right;
+  /*padding-right: 50px;*/
+  padding-right: 40px;
+}
+.markets #content .table-currency > thead > tr > th:first-child,
+.markets #content .table-currency > thead > tr > th:last-child {
+  text-align: center;
+  padding-right: 0;
+}
+.markets #content .table-currency > tbody > tr {
+  cursor: pointer;
+  /* &.up{background-color: #bbdfb2;}
+               &.down{background-color: #ffdfcd;} */
+}
+.markets #content .table-currency > tbody > tr:nth-child(odd) {
+  background-color: #f7f9fa;
+}
+.markets #content .table-currency > tbody > tr:nth-child(even) {
+  background-color: #fcfeff;
+}
+.markets #content .table-currency > tbody > tr > td {
+  color: #425461;
+  font-size: 12px;
+  height: 40px;
+  /*padding-right: 50px;*/
+  padding-right: 50px;
+  text-align: right;
+}
+.markets #content .table-currency > tbody > tr > td:first-child {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.markets #content .table-currency > tbody > tr > td:first-child > * {
+  vertical-align: middle;
+}
+.markets #content .table-currency > tbody > tr > td:first-child > span:nth-child(2) {
+  padding: 0 5px;
+}
+.markets #content .table-currency > tbody > tr > td:first-child > a {
+  color: #7099b6;
+}
+.markets #content .table-currency > tbody > tr > td.red {
+  color: #2c9b00;
+}
+.markets #content .table-currency > tbody > tr > td.green {
+  color: #e95500;
+}
+.markets #content .table-currency > tbody > tr > td:last-child {
+  text-align: center;
+  padding-right: 0;
+}
+.markets .search-input {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+.markets .search-input.active > i {
+  display: none;
+}
+.markets .search-input.active > input {
+  padding-left: 6px;
+  width: 200px;
+}
+.markets .search-input > i {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.markets .search-input > input {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 16px;
+  padding: 6px;
+  padding-left: 31px;
+  width: 118px;
+  transition: all .3s linear;
+}
+.markets .search-input > input:focus {
+  border: 1px solid #0e7dcc;
+  box-shadow: 0 0 5px rgba(14, 125, 204, 0.5);
+}
+.markets .dropdown-box {
+  display: inline-block;
+  position: relative;
+  margin-left: -3px;
+}
+.markets .dropdown-box > .dropdown-txt {
+  border: 1px solid #cfdce6;
+  box-shadow: inset 3px 3px 2px #eff4f7;
+  display: inline-block;
+  height: 20px;
+  padding: 9px 10px;
+  position: relative;
+  width: 328px;
+}
+.markets .dropdown-box > .dropdown-txt > * {
+  vertical-align: middle;
+  font-size: 12px;
+}
+.markets .dropdown-box > .dropdown-txt > .txt-num {
+  padding-left: 5px;
+}
+.markets .dropdown-box > .dropdown-txt > .icon-auth,
+.markets .dropdown-box > .dropdown-txt > .icon-unauth {
+  margin-right: 10px;
+}
+.markets .dropdown-box > .dropdown-txt > .icon-down2 {
+  float: right;
+  margin-top: 8px;
+}
+.markets .dropdown-box > .dropdown-txt > .operate-style {
+  border-left: 1px solid #cfdce6;
+  display: none;
+  color: #0e7dcc;
+  font-size: 12px;
+  padding-left: 3%;
+  position: absolute;
+  right: 8%;
+  top: 28%;
+}
+.markets .dropdown-box > .dropdown-list {
+  border: 1px solid #cfdce6;
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: -1px;
+  max-height: 280px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 4;
+}
+.markets .dropdown-box > .dropdown-list.on {
+  display: block;
+}
+.markets .dropdown-box > .dropdown-list.wallet-list > li > label {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 4px;
+}
+.markets .dropdown-box > .dropdown-list.wallet-list > li > label > span {
+  display: block;
+}
+.markets .dropdown-box > .dropdown-list.wallet-list > li > label > span:first-child {
+  color: #42a5ec;
+}
+.markets .dropdown-box > .dropdown-list.wallet-list > li > .icon-del {
+  margin-top: 5px;
+  position: absolute;
+  right: 4px;
+  z-index: 5;
+}
+.markets .dropdown-box > .dropdown-list > li {
+  border-bottom: 1px solid #edf4fa;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.markets .dropdown-box > .dropdown-list > li:last-child {
+  border-bottom: none;
+}
+.markets .dropdown-box > .dropdown-list > li > * {
+  vertical-align: middle;
+}
+.markets .dropdown-box > .dropdown-list > li > .bankname {
+  padding-left: 9px;
+  padding-right: 16px;
+}
+.markets .dropdown-box > .dropdown-list > li > .icon-del {
+  float: right;
+}
+.markets .dropdown-box > .dropdown-list > li:hover,
+.markets .dropdown-box > .dropdown-list > li.active {
+  background-color: #edf5fa;
+  color: #42a5ec;
+}

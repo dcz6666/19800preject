@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>API Keys</title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-modify">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-key"></i><span>API Keys</span></div>
+            <div class="other-body other-body2">
+               <div class="api-box hide">
+                  <h3 data-i18n="applications"></h3>
+                  <p class="api-msg" data-i18n="API_introduction"></p>
+                  <form class="form-default api-form" data-form="1">
+                     <div class="form-group">
+                        <label for="tag" data-i18n="tag"></label>
+                        <div class="box-input">
+                           <input type="text" id="tag" data-i18n="[placeholder]tag2" tabindex="1" />
+                           <p class="txt-msg error hide" data-i18n="tag_empty"></p>
+                        </div>
+                     </div>
+                     <!-- <div class="form-group auth-group">
+                        <label data-i18n="authority"></label>
+                        <div class="box-input">
+                           <label><input type="radio" name="auths" /><span data-i18n="block_trade"></span></label>
+                           <label><input type="radio" name="auths" /><span data-i18n="cash_out"></span></label>
+                           <label><input type="radio" name="auths" /><span data-i18n="bargain"></span></label>
+                        </div>
+                     </div> -->
+                     <!-- <div class="form-group">
+                        <label for="gug-code" data-i18n="verification"></label>
+                        <div class="box-input">
+                           <input type="text" id="gug-code" />
+                        </div>
+                     </div> -->
+                     <div class="form-group">
+                        <label for="buzPwd" data-i18n="trader_password"></label>
+                        <div class="box-input">
+                           <input type="password" id="buzPwd" data-i18n="[placeholder]tra_pwd" tabindex="2" />
+                           <a href="./forgotBuzPwd.html" data-i18n="forgot_password"></a>
+                           <p class="txt-msg error hide" data-i18n="buzPwd_empty"></p>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="ip" data-i18n="bind_ip2"></label>
+                        <div class="box-input">
+                           <input type="text" id="ip" tabindex="3" placeholder="ip" />
+                           <p class="txt-msg tips" data-i18n="ip_format_tips"></p>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <button type="button" class="btn btn-default modify-btn" id="create-key" data-i18n="establish"></button>
+                     </div>
+                  </form>
+                  <ul class="api-notice">
+                     <li data-i18n="API_use"></li>
+                     <li data-i18n="API_first"></li>
+                     <li data-i18n="API_second"><a href="javascript:;" data-i18n="click_here"></a></li>
+                  </ul>
+               </div>
+               <div class="api-box hide">
+                  <h3 data-i18n="applications"></h3>
+                  <table class="api-table">
+                     <thead>
+                        <tr>
+                           <th data-i18n="create_time"></th>
+                           <th data-i18n="user_id"></th>
+                           <th data-i18n="tag2"></th>
+                           <th data-i18n="pub_key"></th>
+                           <th data-i18n="pri_key"></th>
+                           <th><span data-i18n="ip_white"></span><!-- <a href="javascript:;" data-type="edit">(编辑)</a> --></th>
+                           <th>&nbsp;</th>
+                        </tr>
+                     </thead>
+                     <tbody></tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <!-- <div class="mod-box mod2" id="mod-create">
+            <div class="mod-title"><span data-i18n="bind_succeed"></span><i class="icon icon-close" data-name="mod-create" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <p class="callback-msg" data-i18n="API_apply"></p>
+                     <ul class="other-msg">
+                        <li data-i18n="API_key"><span class="access-key">7e512f45-c952b023-7b6d4db3-32cfa</span></li>
+                        <li data-i18n="API_secret"><span class="secret-key">ca1ef48a-60086cf3-30217cf8-24990</span></li>
+                        <li data-i18n="IP_address"><span class="ip-addr">116.226.65.133</span></li>
+                     </ul>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div> -->
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" id="ok-tip" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-edit" onsubmit="return false;">
+            <div class="mod-title"><span data-i18n="ip_white_update"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" data-form="2">
+                  <div class="form-group">
+                     <label for="e-buzPwd" data-i18n="trader_password"></label>
+                     <input type="password" id="e-buzPwd" data-i18n="[placeholder]tra_pwd" />
+                     <p class="txt-msg error hide" data-i18n="buzPwd_empty"></p>
+                  </div>
+                  <div class="form-group">
+                     <label for="bindIp" data-i18n="bind_ip2"></label>
+                     <input type="text" id="bindIp"  placeholder="ip" />
+                  </div>
+                  <div class="form-group ml75">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default" id="to-edit" data-i18n="certain"></button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-operate" onsubmit="return false;">
+            <div class="mod-title"><span data-i18n="del_api"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" data-form="3">
+                  <div class="form-group">
+                     <label for="o-buzPwd" data-i18n="trader_password"></label>
+                     <input type="password" id="o-buzPwd" data-i18n="[placeholder]tra_pwd" />
+                     <p class="txt-msg error hide" data-i18n="buzPwd_empty"></p>
+                  </div>
+                  <div class="form-group ml75">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default" id="btn-operate" data-i18n="certain"></button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

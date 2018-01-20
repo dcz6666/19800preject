@@ -1,0 +1,134 @@
+@import './sign.less';
+#bg{ background: url('../imgs/bg.jpg') center no-repeat; background-size: cover;}
+#bg-wrap{ min-width: 1200px; position: relative; width: 100%;
+   >#header{ background-color: #0e7dcc; position: relative;}
+   >.w-box{.width;
+      >.login-box{ background-color: rgba(255,255,255,.85); width: 388px; padding: 30px 46px; margin: 0 auto; margin-top: 100px;
+         &.bind-box{padding-top: 45px; padding-bottom: 70px;}
+         >.box-tab{
+            >.code-tab{font-size: 12px; color: #0e7dcc; cursor: pointer; text-align: right;}
+         }
+         >.box-title{ color: #333; font-size: 22px; margin-bottom: 20px; text-indent: 10px; text-align: center;
+            &.ls{letter-spacing: 10px;}
+         }
+         >.box-tip{color: #999; font-size: 12px; margin-top: -10px; margin-bottom: 40px; text-align: center;}
+         >.bind-btn{background-color: #1495e3; border-radius: 4px; color: #fff; display: block; font-size: 18px; height: 50px; line-height: 46px; margin-bottom: 30px; padding-left: 30%; width: 70%;
+            &:last-child{margin-bottom: 0;}
+            >*{vertical-align: middle;}
+            >span{padding-left: 10px;}
+         }
+         >.box-input{background-color: #fff; border: 1px solid #f2f2f2; margin: 10px 0; padding: 12px 15px; position: relative; width: 355px;
+            >*{vertical-align: middle;}
+            &.box-auth{margin-bottom: 55px;
+               >.send-code{
+                  >button{background-color: #fff; border: none; border-left: 1px solid #f2f2f2; color: #333; cursor: pointer; font-size: 14px; height: 47.5px; padding: 0 10px; position: absolute; top: 0; right: 0;
+                     &[disabled]{cursor: not-allowed;}
+                  }
+               }
+               >.code-tab{font-size: 12px; position: absolute; right: 0; bottom: -26px;
+                  >span{color: @blue; cursor: pointer;}
+               }
+            }
+            &.box-hide{display: none !important;}
+            &.box-style{background-color: transparent; border: none; color: #333;
+               >*{font-size: 18px;}
+               >span{padding-left: 25px;}
+            }
+            &#pic-code{display: none;}
+            &.msg-show,&.email-show{display: none;}
+            >img{ cursor: pointer; font-size: 12px; height: 50px; line-height: 46px; position: absolute; right: 0; top: 0;}
+            >input{ color: #181818; border: none; font-size: 14px; margin-left: 22px; padding: 0; line-height: 22px; width: 88%;
+               &input[type="password"]{letter-spacing: 5px;}
+               &.input-validate,&.input-email{width: 60%;}
+            }
+            >.btn-msg{ color: #333; cursor: pointer; background: linear-gradient(to bottom,#fff,#f2f2f2); border: none; border-left: 1px solid #f2f2f2; display: block; font-size: 14px; height: 48px; line-height: 50px; position: absolute; right: 0; top: 0; width: 78px; text-align: center;
+               &[disabled]{cursor: not-allowed; background: linear-gradient(to bottom,#f2f2f2,#fff);
+               }
+               &:hover{background: linear-gradient(to bottom,#f2f2f2,#fff);}
+            }
+            
+            >.btn-dropdown{color: #333; display: none; position: absolute; right: 0; top: 0;
+               >button{background-color: #fff; border: none; border-left: 1px solid #f2f2f2; cursor: pointer; padding: 16px 40px 16px 15px; background: url(../imgs/icon-down.png) 85% center no-repeat;
+                  >span{display: block; height: 18px; line-height: 18px;}
+               }
+            }
+            >.list-dropdown{ border: 1px solid rgba(0,0,0,0.15); box-shadow: 0 6px 12px rgba(0,0,0,0.175); background-color: #fff; color: #262626; display: none; height: 400px; position: absolute; overflow-y: auto; width: 100%; top: 55px; left: 0; z-index: 3;
+               &.active{display: block;}
+               >li{color: #333; font-size: 12px; line-height: 20px;
+                  &:hover{background-color: #f5f5f5;}
+                  &.active{background-color: #55a9e6 !important; color: #fff;}
+                  >a{ cursor: pointer; display: block; padding: 3px 20px;}
+               }
+            }
+            >#country-code{  border: none; border-left: 1px solid #f2f2f2; height: 50px; width: 78px; padding: 0 10px; position: absolute; right: 0; top: 0; -webkit-appearance: none; -moz-appearance: none; appearanec: none;}
+         }
+         >.box-checkbox{position:relative;
+            >label{color: #afb1b2; cursor: pointer; font-size: 12px;
+               >input{margin: 0; margin-right: 10px; vertical-align:middle;}
+               >a{color: @blue;}
+               >p{display:inline-block;
+                  >.sign{
+                     >i{display:inline-block; color:#4590d2; font-weight: 700}
+                  }
+                  >*{vertical-align: bottom;}
+                  a{color: #afb1b2;
+                     &:hover{color: #1495e3; text-decoration: underline;}
+                  }
+               }
+            }
+            >.cont-tips{position:absolute; width:254px; height:53px; color:rgb(66,84,97); text-align:justify; font-size:12px; background:#fff; left:118px; padding:5px 8px; top:2px; border:1px solid #d7e2ea; box-shadow:2px 2px 4px rgba(66,84,97,.2); border-radius:4px; display:none;
+               &::before{content: " "; top:10px; left:-5px; position:absolute; width:10px; height:10px; background:#fff; border:1px solid #d7e2ea; transform:rotate(45deg); border-top: transparent; border-right: transparent; z-index: 1000;}
+            }
+         }
+         >.box-radio{
+            >li{display: inline-block; font-size: 12px; vertical-align: middle; margin-right: 10px;
+               &:first-child{ color: #333; font-size: 16px; padding-right: 10px;}
+               >label{cursor: pointer;
+                  >*{vertical-align: middle; height: 16px;}
+                  >span{color: #181818; padding-left: 5px;}
+               }
+            }
+            >label{cursor: pointer; padding-right: 20px;
+               &:last-child{padding-right: 0;}
+               >*{vertical-align: middle;}
+               >span{color: #181818; padding-left: 5px; font-size: 12px;}
+            }
+         }
+         >.box-btn{ margin-top: 16px;
+            >button{font-size: 18px; height: 40px; width: 100%;}
+         }
+         >.box-other{ font-size: 12px; padding-left: 27%; margin-top: 10px;
+            >li{float: left;
+               >a{color: #afb1b2; padding: 0 5px;
+                  &:hover{color: #1495e3; text-decoration: underline;}
+               }
+               >span{color: #afb1b2;}
+            }
+            &:after{.after;}
+         }
+         >.box-warn{color: #afb1b2; display: none; font-size: 12px; padding: 0 1px;
+            >p{margin-bottom: 10px;
+               >i{margin-right: 10px;}
+            }
+            >ul{display: table; table-layout: fixed; width: 100%; height: 100%;
+               >li{ border-right: 1px solid #fff; background-color: #e6e6e6; color: #99abb7; display: table-cell; line-height: 18px; text-align: center;
+                  &:last-child{border-right: 0;}
+                  &.active{color: #fff;
+                     &:first-child{background-color: #d2e8f7;}
+                     &:nth-child(2){background-color: #8ec6ed;}
+                     &:nth-child(3){background-color: #55a9e6;}
+                     &:nth-child(4){background-color: #1495e3;}
+                  }
+               }
+            }
+         }
+         >.box-error{ display: none; color: #f1624b; font-size: 12px; text-align: center;}
+         >.redirect{ color: #afb1b2; font-size: 12px; margin-top: 10px; text-align: center;
+            >a{color: #333;}
+         }
+      }
+   }
+}
+.btn-go{display: none;}
+
+

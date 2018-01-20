@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="my_deity"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-order">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-order3"></i><span data-i18n="my_deity"></span></div>
+            <div class="other-body">
+               <ul class="tab-change" data-sign="order">
+                  <li class="on" data-i18n="limit"></li>
+                  <li data-i18n="plan_order"></li>
+               </ul>
+               <div class="dropdown-box box-right">
+                  <div class="dropdown-txt"><span>CNY</span><i class="icon icon-down2"></i></div>
+                  <ul class="dropdown-list">
+                     <li><img src="./imgs/c-btc.png" data-i18n="[alt]icon"><span>BTC</span></li>
+                     <li class="on"><img src="./imgs/c-cny.png" data-i18n="[alt]icon"><span>CNY</span></li>
+                     <li><img src="./imgs/c-etc.png" data-i18n="[alt]icon"><span>ETC</span></li>
+                  </ul>
+                  <div class="search-box">
+                     <input type="text" id="market-search" />
+                     <ul class="market-list">
+                        <!-- <li><span class="search-txt">NBC</span> (<span>New SaiBoCoin</span>)</li>
+                        <li><span class="search-txt">BTC</span>(<span>BitCoin</span>)</li>
+                        <li><span class="search-txt">KPC</span>(<span>Keplercoin</span>)</li> -->
+                     </ul>
+                  </div>
+               </div>
+               <div class="other-tables">
+                  <table class="table-order order-1th show">
+                     <thead>
+                        <tr>
+                           <th data-i18n="pend_time"></th>
+                           <th data-i18n="market"></th>
+                           <th data-i18n="type"></th>
+                           <th data-i18n="num_pend"></th>
+                           <th data-i18n="unit_price"></th>
+                           <th data-i18n="business"></th>
+                           <th><span data-i18n="operation"></span><span class="batch-back" data-type="1" data-i18n="BULK"></span></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- <tr class="red">
+                           <td>2017-01-02 13:12:32</td>
+                           <td><span>BTC</span>/<span>VTC</span></td>
+                           <td>买入</td>
+                           <td><span>82.21</span>/<span>12.00</span>(<span>VTC</span>)</td>
+                           <td><span>1.0031</span>(<span>BTC</span>)</td>
+                           <td><span>14.2</span>(<span>BTC</span>)</td>
+                           <td><a href="javascript:;">撤销</a></td>
+                        </tr>
+                        <tr class="green">
+                           <td>2017-01-02 13:12:32</td>
+                           <td><span>BTC</span>/<span>ANS</span></td>
+                           <td>卖出</td>
+                           <td><span>62.21</span>/<span>12.00</span>(<span>ANS</span>)</td>
+                           <td><span>0.0031</span>(<span>BTC</span>)</td>
+                           <td><span>4.21</span>(<span>BTC</span>)</td>
+                           <td><a href="javascript:;">撤销</a></td>
+                        </tr> -->
+                     </tbody>
+                  </table>
+                  <table class="table-order order-2th">
+                     <thead>
+                        <tr>
+                           <th data-i18n="pend_time"></th>
+                           <th data-i18n="market"></th>
+                           <th data-i18n="type"></th>
+                           <th data-i18n="measured"></th>
+                           <th data-i18n="trigger_price"></th>
+                           <th data-i18n="Entrust"></th>
+                           <th><span data-i18n="operation"></span><span class="batch-back" data-type="2" data-i18n="BULK"></span></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- <tr class="red">
+                           <td>2017-01-02 13:12:32</td>
+                           <td><span>BTC</span>/<span>VTC</span></td>
+                           <td>买入</td>
+                           <td><span>12.00</span>(<span>VTC</span>)</td>
+                           <td>
+                              <label>追高：<span>--</span></label>
+                              <label>抄底：<span>1.0031</span>(<span>BTC</span>)</label>
+                           </td>
+                           <td>
+                              <label>追高：<span>--</span></label>
+                              <label>抄底：<span>1.0031</span>(<span>BTC</span>)</label>
+                           </td>
+                           <td><a href="javascript:;">撤销</a></td>
+                        </tr>
+                        <tr class="green">
+                           <td>2017-01-02 13:12:32</td>
+                           <td><span>BTC</span>/<span>ANS</span></td>
+                           <td>卖出</td>
+                           <td><span>62.21</span>(<span>ANS</span>)</td>
+                           <td>
+                              <label>止盈：<span>--</span></label>
+                              <label>止损：<span>1.0031</span>(<span>BTC</span>)</label>
+                           </td>
+                           <td>
+                              <label>止盈：<span>--</span></label>
+                              <label>止损：<span>1.0031</span>(<span>BTC</span>)</label>
+                           </td>
+                           <td><a href="javascript:;">撤销</a></td>
+                        </tr> -->
+                     </tbody>
+                  </table>
+               </div>
+               <div class="pagination-box">
+                  <ul class="pagination-list">
+                     <!-- <li class="st-page"><i class="icon icon-direction"></i></li>
+                     <li class="on">1</li>
+                     <li>2</li>
+                     <li>3</li>
+                     <li class="etc-page">...</li>
+                     <li>14</li>
+                     <li class="ed-page"><i class="icon icon-direction"></i></li> -->
+                  </ul>
+                  <label class="turnover-log"><span data-sign="check"></span><a href="./turnoverLog.html?marketId=cny_btc" class="my-turnover-link" data-i18n="t_records"></a></label>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-buz">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" id="buz-form" onsubmit="return false;">
+                  <div class="form-group buz-group">
+                     <label for="input-pwd" data-i18n="trader_password"></label><input type="password" id="input-pwd" data-i18n="[placeholder]enter_password" />
+                     <div class="error-tips"></div>
+                     <div class="close-buzPwd hide">
+                        <label><input type="radio" name="close" value="4"><span data-i18n="never"></span></label>
+                        <label><input type="radio" name="close" value="2"><span data-i18n="first_order"></span></label>
+                        <label><input type="radio" name="close" value="3"><span data-i18n="every_time"></span></label>
+                     </div>
+                     <a href="./forgotBuzPwd.html" target="_blank" data-i18n="forget_passcode"></a>
+                  </div>
+                  <div class="form-group buz-group">
+                     <p class="buz-tips hide"><span data-i18n="warm_tip"></span><span data-type="1" data-i18n="return"></span></p>
+                     <p class="buz-tips"><span data-i18n="temporarily"></span><span data-type="2" data-i18n="clse_tran"></span></p>
+                  </div>
+                  <div class="form-group tc">
+                     <button type="button" class="btn" data-action="close" data-i18n="cancel"></button>
+                     <button type="button" class="btn btn-default hide" id="to-modify" data-sign="update" data-i18n="modify"></button>
+                     <button type="button" class="btn btn-default" id="to-addr" data-sign="ok" data-i18n="certain"></button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="safe_setting"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-safeset">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-safe2"></i><span data-i18n="safe_setting"></span></div>
+            <div class="other-body other-body2">
+               <div class="safeset-box">
+                  <table class="safeset-table">
+                     <tbody>
+                        <tr class="green" id="set-loginPwd">
+                           <td><i class="icon icon-unlock"></i><span data-i18n="login_pwd"></span></td>
+                           <td data-i18n="h_set"></td>
+                           <td><span data-i18n="use_log"></span></td>
+                           <td class="opearate-btn"><a href="./modify-loginPwd.html" data-i18n="modify"></a></td>
+                        </tr>
+                        <tr class="red" id="set-buzPwd">
+                           <td><i class="icon icon-lock3"></i><span data-i18n="tra_pwd"></span></td>
+                           <td data-i18n="no_set"></td>
+                           <td><span data-i18n="ensure_nomal"></span ><span data-i18n="Transactions"></span></td>
+                           <td class="opearate-btn"><a href="./set-buzPwd.html" data-i18n="set"></a><a href="./modify-buzPwd.html" class="hide" data-i18n="modify"></a></td>
+                        </tr>
+                        <tr class="red" id="set-phone">
+                           <td><i class="icon icon-phone2"></i><span data-i18n="bind_phone"></span></td>
+                           <td data-i18n="not_bound"></td>
+                           <td><span data-i18n="for_safe"></span><span data-i18n="for_login"></span></td>
+                           <td class="opearate-btn"><a href="./bind-phone.html" data-i18n="bind"></a><span class="hide" data-bind="phone" data-i18n="unbound"></span></td>
+                        </tr>
+                        <tr class="red" id="set-email">
+                           <td><i class="icon icon-email2"></i><span data-i18n="binding_mailbox"></span></td>
+                           <td data-i18n="not_bound"></td>
+                           <td><span data-i18n="for_mailbox"></span><span data-i18n="for_login"></span></td>
+                           <td class="opearate-btn"><a href="./bind-email.html" data-i18n="bind"></a><span class="hide" data-bind="email" data-i18n="unbound"></span></td>
+                        </tr>
+                        <tr class="red" id="set-gug">
+                           <td><i class="icon icon-gug"></i><span data-i18n="bind_google"></span></td>
+                           <td data-i18n="not_bound"></td>
+                           <td><span data-i18n="receive_msg"></span><span data-i18n="for_login"></span></td>
+                           <td class="opearate-btn"><a href="./set-gugValidate.html" data-i18n="bind"></a><span class="hide" data-bind="gug" data-i18n="unbound"></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-gug">
+            <div class="mod-title"><span data-i18n="remove_bind"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" onsubmit="return false">
+                  <div class="form-group hide">
+                     <label for="input-gug" data-i18n="verification"></label><input type="text" id="input-gug" data-i18n="[placeholder]enter_goo" />
+                     <p class="code-tab hide" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+                  </div>
+                  <div class="form-group hide">
+                     <label for="input-phone" data-i18n="pho_verify"></label><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+                     <p class="send-code"><button type="button" data-sign="msg" data-i18n="send_verify"></button></p>
+                     <p class="code-tab hide" data-type="gug"><span data-i18n="switch"></span data-i18n="Authenticator"><span></span></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="gug" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-phone">
+            <div class="mod-title"><span data-i18n="lift_bound"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" onsubmit="return false">
+                  <div class="form-group">
+                     <label for="input-phone" data-i18n="pho_verify"></label><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+                     <p class="send-code"><button type="button" data-sign="msg" data-i18n="send_verify"></button></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="phone" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-email">
+            <div class="mod-title"><span data-i18n="unlock_mail"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form" onsubmit="return false">
+                  <div class="form-group">
+                     <label for="input-phone" data-i18n="email_code"></label><input type="text" id="input-phone" data-i18n="[placeholder]email_verify" />
+                     <p class="send-code"><button type="button" data-sign="email" data-i18n="send_verify"></button></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="email" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title"><span data-i18n="prompt"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

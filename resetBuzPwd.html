@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="reset_passd"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <form class="login-box resetBuz-box" id="register-box" onsubmit="return false">
+            <div class="box-title" data-i18n="reset_passd"></div>
+            
+            <div class="box-input">
+               <i class="icon icon-lock2"></i><input type="password" id="pwd" autofocus data-i18n="[placeholder]enter_password" tabindex="1" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="Registration"></span></div>
+            </div>
+            <div class="box-warn">
+               <p><i class="icon icon-warn"></i><span data-i18n="Registration"></span></p>
+               <ul>
+                  <li data-i18n="disqualification"></li>
+                  <li data-i18n="weak"></li>
+                  <li data-i18n="centre"></li>
+                  <li data-i18n="strong"></li>
+               </ul>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-lock2"></i><input type="password" id="repwd" data-i18n="[placeholder]passwordRepeatRule" tabindex="2" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span></span></div>
+            </div>
+            <div class="box-input" data-type="phone">
+               <i class="icon icon-bubble"></i><input type="text" id="msg-code" class="input-validate" data-i18n="[placeholder]enter_sms" tabindex="3" />
+               <button type="button" class="btn-msg" data-type="msg" data-i18n="button"></button>
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="sms_verify"></span></div>
+            </div>
+            <div class="box-input" data-type="gug">
+               <i class="icon icon-gug4"></i><input type="text" id="google" data-i18n="[placeholder]enter_goo" tabindex="3" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="content_empty"></span></div>
+            </div>
+            <div class="box-tab">
+               <p class="code-tab hide" data-type="gug"><span data-i18n="switch"></span><span data-i18n="Authenticator"></span></p>
+               <p class="code-tab hide" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+            </div>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-reset" data-i18n="sure_modify"></button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div id="mask">
+      <div class="mod-box mod1" id="mod-tips">
+         <div class="mod-title"><i class="icon icon-smile"></i><span data-i18n="reset_suc"></span></div>
+         <div class="mod-body">
+            <p data-i18n="assets_safety"></p>
+            <p data-i18n="understanding"></p>
+         </div>
+         <div class="mod-btn">
+            <a href="/" class="btn btn-default" data-i18n="certain"></a>
+         </div>
+      </div>
+      <div class="mod-box mod1" id="mod-error">
+         <div class="mod-title"><i class="icon icon-sad"></i><span data-i18n="reset_failed"></span></div>
+         <div class="mod-body">
+            <p class="errorText"></p>
+         </div>
+         <div class="mod-btn">
+            <button type="button" data-action="close" class="btn btn-default" data-i18n="certain"></button>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>

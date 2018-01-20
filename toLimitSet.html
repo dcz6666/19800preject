@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="price_set"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-limitset">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-limit"></i><span data-i18n="price_set"></span></div>
+            <div class="other-body other-body2">
+               <div class="limitset-box">
+                   <ul class="set-notice">
+                     <li>
+                        <label><span class="other-validate-txt" data-i18n="overloading"></span></label>
+                        <div class="slide-box off" data-sign="6">
+                           <label>
+                              <span class="slide-on">ON</span>
+                              <span class="slide-btn"></span>
+                              <span class="slide-off">OFF</span>
+                           </label>
+                        </div>
+                     </li>
+                  </ul>
+                  <form class="form-default">
+                     <div class="form-group">
+                     <label data-i18n="limit_scope"></label>
+                     <div class="box-input">
+                     <input type="text" data-i18n="[placeholder]limit_please" class="price">
+                     <span>%</span>
+                     </div>
+                     </div>
+                     <div class="form-group">
+                     <button type="button" class="btn btn-default btn-submit" data-i18n="confirm_set"></button>
+                     </div>  
+                  </form>
+                  <div class="limit">
+                     <div><i class="icon icon-bulb" ></i><span data-i18n="assume_set"></span></div>
+                     <ul>
+                        <li data-i18n="under_price"></li>
+                        <li data-i18n="up_bill"></li>
+                        <li data-i18n="low_price"></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-gug">
+            <div class="mod-title"><span data-i18n="remove_bind"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group hide">
+                     <label for="input-gug" data-i18n="verification"></label><input type="text" id="input-gug" data-i18n="[placeholder]enter_goo" />
+                     <p class="code-tab hide" data-type="phone"><span data-i18n="switch"></span><span data-i18n="phone_verify"></span></p>
+                  </div>
+                  <div class="form-group hide">
+                     <label for="input-phone" data-i18n="pho_verify"></label><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+                     <p class="send-code"><button type="button" data-sign="msg" data-i18n="send_verify"></button></p>
+                     <p class="code-tab hide" data-type="gug"><span data-i18n="switch"></span data-i18n="Authenticator"><span></span></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="gug" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-phone">
+            <div class="mod-title"><span data-i18n="lift_bound"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <label for="input-phone" data-i18n="pho_verify"></label><input type="text" id="input-phone" data-i18n="[placeholder]enter_verify" />
+                     <p class="send-code"><button type="button" data-sign="msg" data-i18n="send_verify"></button></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="phone" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-email">
+            <div class="mod-title"><span data-i18n="unlock_mail"></span><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <label for="input-phone" data-i18n="email_code"></label><input type="text" id="input-phone" data-i18n="[placeholder]email_verify" />
+                     <p class="send-code"><button type="button" data-sign="email" data-i18n="send_verify"></button></p>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default unbind-btn" data-sign="email" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title" data-i18n="prompt"><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

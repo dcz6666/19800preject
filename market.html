@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="quotes_page"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/market.css" />
+</head>
+<body>
+   <div id="wrap" class="markets market">
+      @@include('./include/header.html')
+      <div id="content">
+         <ul class="ctt c01">
+            <li><img src="./imgs/icon-big-cny.png" data-i18n="[placeholder]currency" /><label><span class="coin-txt" data-i18n="deal_amount"></span><span class="coin-num cny-num"></span></label></li>
+            <li><img src="./imgs/icon-big-btc.png" data-i18n="[placeholder]currency" /><label><span class="coin-txt" data-i18n="bitcoin"></span><span class="coin-num btc-num"></span></label></li>
+            <li><img src="./imgs/icon-big-eth.png" data-i18n="[placeholder]currency" /><label><span class="coin-txt" data-i18n="ETH"></span><span class="coin-num eth-num"></span></label></li>
+         </ul>
+         <div class="ctt c02">
+            <ul class="ctt-tab tab-top5">
+               <li class="active"><span>CNY</span><span>TOP5</span></li>
+               <li><span>BTC</span><span>TOP5</span></li>
+               <li><span>ETH</span><span>TOP5</span></li>
+            </ul>
+            <div class="top5-box">
+               <ul class="show"></ul>
+               <ul></ul>
+               <ul></ul>
+            </div>
+         </div>
+         <div class="ctt c03">
+            <ul class="ctt-tab tab-currency">
+               <li class="active">CNY</li>
+               <li>BTC</li>
+               <li>NTC</li>
+            </ul>
+            <div class="search-input"><i class="icon icon-search"></i><input type="text" id="currency-search" data-i18n="[placeholder]screening" /></div>
+            <div class="currency-box">
+               <table class="table-currency show">
+                  <thead>
+                     <tr>
+                        <th data-i18n="currency"></th>
+                        <th data-i18n="latest_price"></th>
+                        <th data-i18n="ceiling_price"></th>
+                        <th data-i18n="lowest_price"></th>
+                        <th data-i18n="turnover"></th>
+                        <th data-i18n="trading_volume"></th>
+                        <th data-i18n="day_up_and_down"></th>
+                        <th data-i18n="seven_up_and_down"></th>
+                        <th data-i18n="Money_on_time"></th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+               <table class="table-currency">
+                  <thead>
+                     <tr>
+                        <th data-i18n="currency"></th>
+                        <th data-i18n="latest_price"></th>
+                        <th data-i18n="ceiling_price"></th>
+                        <th data-i18n="lowest_price"></th>
+                        <th data-i18n="turnover"></th>
+                        <th data-i18n="trading_volume"></th>
+                        <th data-i18n="day_up_and_down"></th>
+                        <th data-i18n="seven_up_and_down"></th>
+                        <th data-i18n="Money_on_time"></th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+               <table class="table-currency">
+                  <thead>
+                     <tr>
+                        <th data-i18n="currency"></th>
+                        <th data-i18n="latest_price"></th>
+                        <th data-i18n="ceiling_price"></th>
+                        <th data-i18n="lowest_price"></th>
+                        <th data-i18n="turnover"></th>
+                        <th data-i18n="trading_volume"></th>
+                        <th data-i18n="day_up_and_down"></th>
+                        <th data-i18n="seven_up_and_down"></th>
+                        <th data-i18n="Money_on_time"></th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+               <div class="pagination-box">
+                  <ul class="pagination-list"></ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/Protobuffer/long.min.js"></script>
+   <script src="./js/Protobuffer/bytebuffer.min.js"></script>
+   <script src="./js/Protobuffer/protobuf.min.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/market.js"></script>
+</body>
+</html>

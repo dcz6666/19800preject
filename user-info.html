@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="person_detail"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap my-userinfo">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-info"></i><span data-i18n="person_detail"></span></div>
+            <div class="other-body other-body2">
+               <div class="user-box">
+                  <ul class="user-detail">
+                     <li>
+                        <ul>
+                           <li data-i18n="real_name"></li>
+                           <li><p class="real-name"></p></li>
+                           <li>&nbsp;</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul class="account-top">
+                           <li data-i18n="account_name"></li>
+                           <li class="modify-account"><i class="icon icon-email"></i><span class="email-txt"></span><a href="./bind-email.html" class="modify-txt hide set-email"></a></li>
+                           <li class="modify-account"><i class="icon icon-phone"></i><span class="phone-num"></span><a href="./bind-phone.html" class="modify-txt hide set-phone"></a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li data-i18n="nickname"></li>
+                           <li><span class="nickname"></span><label class="nickname-tip" data-i18n="nickname_empty"></label>
+                              <input type="text" class="input-box hide" id="nickname" data-i18n="[placeholder]new_nickname" />
+                              <a href="javascript:;" class="modify-txt modify-cg" data-i18n="modify"></a>
+                              <a href="javascript:;" class="modify-txt hide modify-ok" data-i18n="certain"></a>
+                           </li>
+                           <li>&nbsp;</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li data-i18n="login_pwd"></li>
+                           <li><a href="./modify-loginPwd.html" data-i18n="modify"></a></li>
+                           <li>&nbsp;</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <ul>
+                           <li data-i18n="trader_password"></li>
+                           <li><span class="trade-type"></span><a href="./modify-buzPwd.html" class="buz-pwd" data-i18n="modify"></a></li>
+                           <li>&nbsp;</li>
+                        </ul>
+                     </li>
+                   <!--   <li>
+                        <ul>
+                           <li data-i18n="Lastlogintime"></li>
+                           <li class="login-time"></li>
+                           <li><a href="./log-login.html" data-i18n="view_log"></a></li>
+                        </ul>
+                     </li> -->
+                  </ul>
+                  <div class="level-box">
+                     <p><i class="icon icon-safe3"></i><label><span data-i18n="security_level"></span><span class="safe-tip green"></span></label></p>
+                     <p><span data-i18n="you_set"></span><span class="safe-count">0</span><span data-i18n="protection"></span></p>
+                     <p><a href="./toSafeSet.html" data-i18n="promote"></a></p>
+                  </div>
+                  <div class="level-box">
+                     <p><i class="icon icon-card2"></i><label><span data-i18n="Certify"></span><span class="verify-level green"></span></label></p>
+                     <p class="verify-tips"></p>
+                     <p><a href="./toRealName.html?type=auth" data-i18n="promote"></a></p>
+                  </div>
+                  <div class="level-box">
+                     <p><i class="icon icon-badge"></i><label><span data-i18n="integral"></span><span class="vip-level green"></span></label></p>
+                     <p><span data-i18n="formalities"></span><span>0.00%</span><span data-i18n="enhance"></span></p>
+                     <p><a href="javascript:;" data-i18n="check"></a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-create">
+            <div class="mod-title"><span data-i18n="bind_succeed"></span><i class="icon icon-close" data-name="mod-create" data-action="close"></i></div>
+            <div class="mod-body">
+               <form class="mod-form">
+                  <div class="form-group">
+                     <p class="callback-msg" data-i18n="API_apply"></p>
+                     <ul class="other-msg">
+                        <li>API 访问密钥(Access Key) : <span class="access-key">7e512f45-c952b023-7b6d4db3-32cfa</span></li>
+                        <li>API 秘密密钥(Secret Key) : <span class="secret-key">ca1ef48a-60086cf3-30217cf8-24990</span></li>
+                        <li><span data-i18n="IP_address"></span><span class="ip-addr">116.226.65.133</span></li>
+                     </ul>
+                  </div>
+                  <div class="form-group tc"><button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button></div>
+               </form>
+            </div>
+         </div>
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title" data-i18n="prompt"><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

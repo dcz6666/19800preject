@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="modify_login"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/other.css">
+</head>
+<body>
+   <div id="wrap" class="markets other-wrap modify-box my-loginPwd">
+      @@include('./include/header.html')
+      <div id="content">
+         <div class="m-other">
+            <div class="other-title"><i class="icon icon-unlock3"></i><span data-i18n="modify_login"></span></div>
+            <div class="other-body other-body2">
+               <form class="form-default login-form">
+                  <div class="form-group">
+                     <label for="oldPwd" data-i18n="original_passd"></label>
+                     <div class="box-input">
+                        <input type="password" id="oldPwd" data-i18n="[placeholder]orige_pwd" tabindex="1"/>
+                        <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="passd_empty"></span></div>
+                        <a href="./forgotPwd.html" data-i18n="forget_passd"></a>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="newPwd" data-i18n="new_passd"></label>
+                     <div class="box-input box-warn">
+                        <input type="password" id="newPwd" data-i18n="[placeholder]new_pwd" tabindex="2" />
+                        <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="password_null"></span></div>
+                        <p><i class="icon icon-warn"></i><span data-i18n="login_num"></span></p>
+                        <ul>
+                           <li class="active" data-i18n="disqualification"></li>
+                           <li data-i18n="weak"></li>
+                           <li data-i18n="centre"></li>
+                           <li data-i18n="strong"></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="rePwd" data-i18n="confirm_passd"></label>
+                     <div class="box-input">
+                        <input type="password" id="rePwd" data-i18n="[placeholder]cnew_pwd" tabindex="3" />
+                        <div class="box-tips"><i class="icon icon-triangle"></i><span></span></div>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <button type="button" class="btn btn-default modify-btn" data-type="login" data-i18n="submit"></button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      @@include('./include/footer.html')
+      <div id="mask">
+         <div class="mod-box mod2" id="mod-prompt">
+            <div class="mod-title" data-i18n="prompt"><i class="icon icon-close" data-action="close"></i></div>
+            <div class="mod-body tips-box">
+               <p class="tips-txt"></p>
+               <p class="tips-btn">
+                  <button type="button" class="btn btn-default" data-action="close" data-i18n="certain"></button>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/order.js"></script>
+</body>
+</html>

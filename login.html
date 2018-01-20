@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="login"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <form class="login-box ls" id="login-box">
+            <div class="box-title" data-i18n="login"></div>
+            <div class="box-input">
+               <i class="icon icon-user2"></i><input type="text" id="account" data-i18n="[placeholder]phone_email" tabindex="1" autofocus />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="content_blank"></span></div>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-lock2"></i><input type="password" id="pwd" data-i18n="[placeholder]input_pwd" tabindex="2" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="password_null"></span></div>
+            </div>
+            <div class="box-input" id="pic-code">
+               <i class="icon icon-validate"></i><input type="text" class="input-validate" id="code" data-i18n="[placeholder]enter_code" tabindex="3" /><img src="http://10.0.0.218:7898/common/Captcha" id="pic-captcha" data-i18n="[alt]refresh" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="code_empty"></span></div>
+            </div>
+            <p class="box-error" data-i18n="four_chances"></p>
+            <div class="box-checkbox">
+               <label><input type="checkbox" id="remember" /><p class="bind_ip"><span data-i18n="store_user"></span><span class="sign">(<i>?</i>)</span></p></label>
+               <div class="cont-tips" data-i18n="bind_ip"></div>
+            </div>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-submit" data-i18n="login"></button>
+            </div>
+            <ul class="box-other">
+               <li><a href="./register.html" data-i18n="free_regist"></a><span>|</span></li>
+               <li><a href="./forgotPwd.html" data-i18n="forgot"></a><span>|</span></li>
+               <li><a href="javascript:;" data-i18n="a_coin"></a></li>
+            </ul>
+         </form>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>

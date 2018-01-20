@@ -1,0 +1,264 @@
+﻿//登陆到市场
+message LoginToMarket{
+	//用户编号
+	required string UserId = 1;
+	//登陆密钥key
+	required string SecretKey = 2;
+	//登陆的市场Id
+	required string MarketId = 3;
+}
+//修改订单数据
+message UpdateOrderInfo{
+	//市场编号
+	required string MarketId = 1;
+	//订单编号
+	required string OrderId = 2;
+	//订单类型(1:普通订单,2:计划订单)
+	required int32 OrderCategory = 3;
+	//成交数量
+	required double TxVolume = 4;
+	//成交金额
+	required double TxAmount = 5;
+	//修改时间
+	required string UpdateTime = 6;
+}
+//计划订单
+message PlanOrderInfo{
+	//订单编号
+	required string Id = 1;
+	//用户编号
+	required string UserId = 2;
+	//币种id
+	required string CurrencyId = 3;
+	//账户id
+	required string AccountId = 4;
+	//市场Id
+	required string MarketId = 5;
+	//订单类型(1:买单,2:卖单)
+	required int32 OrderType = 6;
+	//最高触发价
+	required double HighTriggerPrice = 7;
+	//最低触发价
+	required double LowTriggerPrice = 8;
+	//最高价格
+	required double HighPrice = 9;
+	//最低价格
+	required double LowPrice = 10;
+	//成交金额
+	required double Amount = 11;
+	//已成交数量
+	required double TxVolume = 12;
+	//已成交金额
+	required double TxAmount = 13;
+	//回退数量
+	required double ReturnAmount = 14;
+	//订单状态
+	required int32 Status = 15;
+	//创建时间
+	required string CreateTime = 16;
+	//修改时间
+	required string UpdateTime = 17;
+	//手续费
+	required double Fee =18;
+}
+//普通订单
+message OrderInfo{
+	//订单编号
+	required string Id = 1;
+	//订单用户编号
+	required string UserId = 2;
+	//订单币种编号
+	required string CurrencyId = 3;
+	//订单账户编号
+	required string AccountId = 4;
+	//市场编号
+	required string MarketId = 5;
+	//订单类型(1:买单,2:卖单)
+	required int32 OrderType = 6;
+	//价格
+	required double Price = 7;
+	//数量
+	required double Volume = 8;
+	//已成交数量
+	required double TxVolume = 9;
+	//金额
+	required double Amount = 10;
+	//已成交金额
+	required double TxAmount = 11;
+	//回退数量
+	required double ReturnAmount = 12;
+	//状态
+	required int32 Status = 13;
+	//创建时间
+	required string CreateTime = 14;
+	//修改时间
+	required string UpdateTime = 15;
+	// 交易手续费
+	required double Fee = 16;
+}
+// 聊天数据
+message Chat{
+	// 名称
+	required string Name = 1;
+	// 聊天内容
+	required string Content = 2;
+	//来源标识
+	optional string SourceId = 3;
+}
+//接收聊天数据
+message ReceiveChat{
+	required string MarketId = 1;
+}
+//K线列表数据
+message KLineList{
+	repeated KLineInfo List = 1;
+}
+//k线数据
+message KLineInfo{
+	//编号
+	required int32 Id = 1;
+	//K线类型
+	required string FrequencyKey = 2;
+	//成交数量
+	required double Volume=3;
+	//成交金额
+	required double Amount=4;
+	//开盘价格
+	required double OpenPrice=5;
+	//收盘价格
+	required double ClosedPrice=6;
+	//最低价
+	required double LowPrice=7;
+	//最高价
+	required double HighPrice=8;
+	//开盘时间
+	required string OpenTime=9;
+	//收盘时间
+	required string CloseTime=10;
+	//对应市场ID
+	optional string MarketId=11;
+}
+//24H滑动数据
+message ScrollDayKLine{
+	required string MarketId = 1;
+	//24H开盘价
+	required double OpenPrice=2;
+	//24H收盘价
+	required double ClosedPrice=3;
+	//24H最低价
+	required double LowPrice=4;
+	//24H最高价
+	required double HighPrice=5;
+	//24H交易数量
+	required double Volume=6;
+	//24H交易金额
+	required double Amount=7;
+}
+//绑定到指定市场
+message BindMarket{
+	required string MarketId = 1;
+}
+//设置频度
+message SetKLineFrequency{
+	required string MarketId = 1;
+	// 频度key
+	required string FrequencyKey = 2;
+	optional bool IsGraph = 3 [default = false];
+	optional bool IsReconnect = 4 [default = false];
+}
+//K线数据补全命令
+message RepairKLine{
+	required string MarketId = 1;
+	// 频度key
+	required string FrequencyKey = 2;
+	//开始ID
+	repeated string StartId = 3;
+}
+//其它市场频度
+message MarketKLineFrequency{
+	required string MarketId = 1;
+	// 频度key
+	repeated string Keys = 2;
+}
+//其它市场k线频度设置
+message SetReceiveOtherMarketKLine{
+	repeated MarketKLineFrequency List = 1;
+}
+//设置市场深度
+message SetMarketDepth{
+	required string MarketId = 1;
+	// 频度key
+	required string DepthKey = 2;
+}
+//市场深度数据
+message MarketDepth{
+	required double Price = 1;
+	required double Total = 2;
+	required double Amount = 3;
+}
+//市场深度列表
+message MarketDepthDto{
+	//市场编号
+	required string MarketId = 1;
+	//深度key
+	required string Key = 2;
+	//卖单深度列表
+	repeated MarketDepth AskList = 3;
+	//买单深度列表
+	repeated MarketDepth BidList = 4;
+}
+//设置获取交易数据
+message SetTradeOrder{
+	required string MarketId = 1;
+	//获取多少条数据
+	required int32 Count = 2;
+}
+//成交订单
+message TradeSimpleDto{
+	required string MarketId = 1;
+	required int32 Id = 2;
+	required double Price = 3;
+	required double Volume = 4;
+	required double Amount = 5;
+	optional bool IsAsk = 6 [default = false];
+	required string CreateTime = 7;
+}
+//成交订单列表
+message TradeSimpleDtoList{
+	repeated TradeSimpleDto List = 1;
+}
+//发送获取排行数据命令数据
+message GetRankingList{
+	//基币种ID
+	required string BasicId = 1;
+}
+//热门上涨币数据列表
+message RankCurrencyDtoList{
+	repeated RankCurrencyDto List = 1;
+}
+//热门排行币数据
+message RankCurrencyDto{
+	//市场ID
+	required string MarketId = 1;
+	//币ID
+	required string CurrencyId = 2;
+	//币名称
+	required string CurrencyName = 3;
+	//币图标
+	required string CurrencyIcon = 4;
+	//价格
+	required double Price = 5;
+	//日上涨幅度
+	required double DayRiseFallPercent = 6;
+	//周上涨幅度
+	required double WeekRiseFallPercent = 7;
+}
+//返回错误信息
+message Error{
+	//产生错误的CommandId
+	required uint32 MsgCommandId=1;
+	//错误码
+	required uint32 ErrorCode=2;
+	//错误消息
+	required string Message = 3;
+}

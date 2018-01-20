@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title data-i18n="set_pwd"></title>
+   <link rel="shortcut icon" href="./logo.ico">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/login.css">
+</head>
+<body id="bg">
+   <div id="bg-wrap">
+      @@include('./include/header.html')
+      <div class="w-box">
+         <div class="login-box setPwd-box" id="register-box">
+            <div class="box-title" data-i18n="set_pwd"></div>
+            <div class="box-input box-style">
+               <i class="icon icon-user2"></i><span data-i18n="account1"></span><label class="account"></label>
+            </div>
+            <div class="box-input">
+               <i class="icon icon-lock2"></i><input type="password" id="pwd" data-i18n="[placeholder]input_pwd" tabindex="1" autofocus />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="password_null"></span></div>
+            </div>
+            <!-- <div class="box-warn">
+               <p><i class="icon icon-warn"></i><span>登录密码8~20位，且为字母、数字、符号等任意2种以上组合。</span></p>
+               <ul>
+                  <li>不合格</li>
+                  <li>弱</li>
+                  <li>中</li>
+                  <li>强</li>
+               </ul>
+            </div> -->
+            <div class="box-input">
+               <i class="icon icon-lock2"></i><input type="password" id="repwd" data-i18n="[placeholder]passwordRepeatRule" tabindex="2" />
+               <div class="box-tips"><i class="icon icon-triangle"></i><span data-i18n="Registration"></span></div>
+            </div>
+            <ul class="box-radio">
+               <li data-i18n="validation"></li>
+               <li><label><input type="radio" name="validate" value="4" checked /><span data-i18n="never"></span></label></li>
+               <li><label><input type="radio" name="validate" value="2" /><span data-i18n="first_order"></span></label></li>
+               <li><label><input type="radio" name="validate" value="3" /><span data-i18n="every_time"></span></label></li>
+            </ul>
+            <div class="box-btn">
+               <button type="button" class="btn btn-default" id="btn-set" data-i18n="imme_sets"></button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="mask">
+      <div class="mod-box mod1" id="mod-setBuzPwd">
+         <div class="mod-title"><i class="icon icon-smile"></i><span data-i18n="trans_success"></span></div>
+         <div class="mod-body">
+            <p><span data-i18n="need_manipulate"></span><a href="./toSafeSet.html" data-i18n="s_set"></a><span data-i18n="Complete"></span></p>
+         </div>
+         <div class="mod-btn">
+            <button class="btn btn-default" data-action="close" data-i18n="close"></button>
+         </div>
+      </div>
+      <div class="mod-box mod1" id="mod-error">
+         <div class="mod-title"><i class="icon icon-sad"></i><span data-i18n="trans_fail"></span></div>
+         <div class="mod-body">
+            <p class="errorMsg"></p>
+         </div>
+         <div class="mod-btn">
+            <button class="btn btn-default" data-action="close" data-i18n="close"></button>
+         </div>
+      </div>
+   </div>
+   <script src="./js/jquery-1.9.1.min.js"></script>
+   <script src="./js/i18next.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/register.js"></script>
+</body>
+</html>
